@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rinko Digital | Premium Websites for Local Service Businesses</title>
+  <meta name="description" content="Rinko Digital builds premium, conversion-focused websites for local service businesses that want better branding, more trust, and more quote requests online." />
+
+  <!-- Google Tag Manager -->
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5QN22FVG');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta property="og:title" content="Rinko Digital | Premium Websites for Local Service Businesses" />
+  <meta property="og:description" content="Premium websites, quote flows, SEO basics, and conversion-focused design for local service businesses." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rinkodigital.com" />
+
+  <style>
+    :root {
+      --bg: #060b1e;
+      --bg-2: #0c1431;
+      --panel: rgba(255,255,255,0.06);
+      --panel-border: rgba(255,255,255,0.12);
+      --text: #ffffff;
+      --muted: #c6c9d8;
+      --pink: #ff4d9a;
+      --pink-dark: #e93884;
+      --purple: #371a57;
+      --white: #ffffff;
+      --shadow: 0 24px 60px rgba(0,0,0,0.35);
+      --radius: 22px;
+      --max: 1240px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(255, 77, 154, 0.14), transparent 28%),
+        radial-gradient(circle at top left, rgba(117, 43, 173, 0.14), transparent 24%),
+        linear-gradient(180deg, #050914 0%, #09112b 100%);
+      line-height: 1.55;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container {
+      width: min(var(--max), calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(5, 9, 20, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      min-width: 0;
+    }
+
+    .logo-img {
+      height: 60px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      max-width: 100%;
+filter: drop-shadow(0 6px 14px rgba(255, 77, 154, 0.35));
+    }
+
+    .brand-text {
+      display: none;
+      line-height: 1;
+    }
+
+    .brand-text strong {
+      font-size: 1.28rem;
+    }
+
+    .brand-text span {
+      color: var(--pink);
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      margin-top: 5px;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+
+    nav a {
+      color: #f2f3f8;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    nav a:hover { color: var(--pink); }
+
+    .btn,
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      transition: 0.22s ease;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, var(--pink), var(--pink-dark));
+      color: var(--white);
+      box-shadow: 0 18px 36px rgba(255, 77, 154, 0.28);
+    }
+
+    .btn:hover,
+    .btn-outline:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 1.6rem;
+    }
+
+    .hero {
+      padding: 56px 0 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-premium {
+      position: relative;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 30px;
+      overflow: hidden;
+      padding: 34px;
+      background:
+        radial-gradient(circle at top right, rgba(255,77,154,0.16), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(143,44,255,0.12), transparent 22%),
+        linear-gradient(135deg, rgba(7,15,39,0.98), rgba(10,16,40,0.96));
+      box-shadow: 0 28px 70px rgba(0,0,0,0.38);
+      isolation: isolate;
+    }
+
+    .hero-grid-premium {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 38px;
+      align-items: center;
+      min-height: 620px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-copy-premium {
+      max-width: 600px;
+    }
+
+    .hero-orb {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(24px);
+      opacity: 0.55;
+      z-index: 1;
+      pointer-events: none;
+      animation: orbFloat 8s ease-in-out infinite;
+    }
+
+    .hero-orb-1 {
+      width: 260px;
+      height: 260px;
+      background: rgba(255,77,154,0.24);
+      top: -70px;
+      right: 80px;
+    }
+
+    .hero-orb-2 {
+      width: 220px;
+      height: 220px;
+      background: rgba(143,44,255,0.18);
+      bottom: -80px;
+      left: -60px;
+      animation-delay: 1.5s;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.9rem, 6vw, 5.2rem);
+      letter-spacing: -0.05em;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 .accent {
+      color: var(--pink);
+    }
+
+    .hero p {
+      font-size: 1.12rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      max-width: 540px;
+    }
+
+    .hero-points-premium {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .hero-point-pill {
+      padding: 11px 15px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.09);
+      color: #e9ecf7;
+      font-weight: 700;
+      font-size: 0.92rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-visual-premium {
+      position: relative;
+    }
+
+    .hero-screen-wrap {
+      position: relative;
+      transform: perspective(1200px) rotateY(-9deg) rotateX(4deg);
+      transform-style: preserve-3d;
+      animation: heroFloat 7s ease-in-out infinite;
+    }
+
+    .hero-screen-glow {
+      position: absolute;
+      inset: 18px -20px -10px 10px;
+      background: radial-gradient(circle at center, rgba(255,77,154,0.22), rgba(143,44,255,0.10), transparent 68%);
+      filter: blur(30px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-screen {
+      position: relative;
+      z-index: 1;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.38);
+    }
+
+    .floating-card {
+      will-change: transform;
+    }
+
+    @keyframes heroFloat {
+      0%, 100% { transform: perspective(1200px) rotateY(-9deg) rotateX(4deg) translateY(0); }
+      50% { transform: perspective(1200px) rotateY(-9deg) rotateX(4deg) translateY(-10px); }
+    }
+
+    @keyframes orbFloat {
+      0%, 100% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-18px) translateX(8px); }
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.09);
+      color: #f5c3da;
+      font-weight: 700;
+      font-size: 0.88rem;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 { line-height: 1.05; margin: 0 0 16px; }
+
+    h1 {
+      font-size: clamp(2.7rem, 6vw, 4.8rem);
+      letter-spacing: -0.05em;
+      margin-bottom: 14px;
+    }
+
+    h1 .accent { color: var(--pink); }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.14rem;
+      max-width: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 600px;
+    }
+
+    .point {
+      border: 1px solid rgba(255,255,255,0.09);
+      background: rgba(255,255,255,0.04);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .point strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .point span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .visual-card {
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      box-shadow: 0 26px 60px rgba(0,0,0,0.34);
+      overflow: hidden;
+    }
+
+    .window-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+    }
+
+    .visual-inner {
+      padding: 28px;
+      background:
+        radial-gradient(circle at top right, rgba(255,77,154,0.22), transparent 24%),
+        linear-gradient(180deg, #0d1432 0%, #070d20 100%);
+    }
+
+    .device {
+      background: #ffffff;
+      color: #0f1530;
+      border-radius: 22px;
+      padding: 18px;
+      transform: rotate(-7deg);
+      box-shadow: 0 22px 46px rgba(0,0,0,0.34);
+    }
+
+    .mini-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      font-weight: 800;
+    }
+
+    .mini-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--pink), #8f2cff);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 0.8rem;
+    }
+
+    .device-hero {
+      background: linear-gradient(135deg, #0a1028, #201143);
+      border-radius: 18px;
+      padding: 26px 22px;
+      margin-bottom: 18px;
+      color: #fff;
+    }
+
+    .device-hero h3 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .device-hero p {
+      margin: 0;
+      color: #cfcfe0;
+      font-size: 0.95rem;
+    }
+
+    .device-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .device-box {
+      border: 1px solid #e7e9ef;
+      border-radius: 14px;
+      padding: 14px 10px;
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #28314f;
+      background: #fff;
+    }
+
+    section {
+      padding: 84px 0;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: 14px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 1.02rem;
+    }
+
+    .grid-3,
+    .grid-2,
+    .pricing-grid,
+    .steps-grid,
+    .portfolio-grid,
+    .contact-grid,
+    .footer-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .grid-3,
+    .pricing-grid,
+    .portfolio-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2,
+    .contact-grid,
+    .footer-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+    }
+
+    .steps-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card,
+    .portfolio-card,
+    .portfolio-actions a,
+    .price-card,
+    .step-card,
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3,
+    .portfolio-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent 26%, rgba(255,77,154,0.05));
+      pointer-events: none;
+    }
+
+    .portfolio-card h3,
+    .price-card h3,
+    .step-card h3,
+    .panel h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .card p,
+    .portfolio-card p,
+    .price-card p,
+    .step-card p,
+    .panel p,
+    .panel li {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, rgba(255,77,154,0.18), rgba(143,44,255,0.18));
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 1.35rem;
+    }
+
+    .portfolio-thumb {
+      aspect-ratio: 16 / 10;
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #150f30, #0b1538 60%, #2b1248);
+      border: 1px solid rgba(255,255,255,0.08);
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+    }
+
+    .portfolio-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .portfolio-link,
+    .portfolio-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 0.92rem;
+      transition: 0.22s ease;
+    }
+
+    .portfolio-link {
+      background: linear-gradient(135deg, var(--pink), var(--pink-dark));
+      color: #fff;
+      box-shadow: 0 14px 28px rgba(255, 77, 154, 0.22);
+    }
+
+    .portfolio-secondary {
+      border: 1px solid rgba(255,255,255,0.14);
+      color: var(--white);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .portfolio-link:hover,
+    .portfolio-secondary:hover {
+      transform: translateY(-2px);
+    }
+
+    .thumb-screen {
+      width: 100%;
+      background: #fff;
+      border-radius: 16px;
+      color: #10162c;
+      overflow: hidden;
+      box-shadow: 0 18px 36px rgba(0,0,0,0.2);
+    }
+
+    .thumb-top {
+      height: 32px;
+      background: #eef1f8;
+      border-bottom: 1px solid #dfe4f0;
+    }
+
+    .thumb-body {
+      padding: 18px;
+    }
+
+    .thumb-hero {
+      background: linear-gradient(135deg, #0a0f24, #3c1455);
+      color: #fff;
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 14px;
+      min-height: 108px;
+    }
+
+    .thumb-lines {
+      display: grid;
+      gap: 8px;
+    }
+
+    .thumb-lines span {
+      height: 10px;
+      border-radius: 999px;
+      background: #e8ebf3;
+      display: block;
+    }
+
+    .thumb-lines span:nth-child(1) { width: 92%; }
+    .thumb-lines span:nth-child(2) { width: 74%; }
+    .thumb-lines span:nth-child(3) { width: 56%; }
+
+    .price-card.featured {
+      transform: translateY(-12px);
+      border-color: rgba(255,77,154,0.55);
+      background:
+        radial-gradient(circle at top right, rgba(255,77,154,0.16), transparent 28%),
+        linear-gradient(180deg, rgba(255,77,154,0.09), rgba(255,255,255,0.05));
+      box-shadow:
+        0 28px 60px rgba(0,0,0,0.36),
+        0 0 0 1px rgba(255,77,154,0.18),
+        0 0 38px rgba(255,77,154,0.14);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-card.featured::before {
+      content: "Recommended";
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,77,154,0.14);
+      border: 1px solid rgba(255,77,154,0.32);
+      color: #ffd7e9;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .price-tag {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: #ffd0e4;
+      font-weight: 800;
+      font-size: 0.84rem;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+      letter-spacing: 0.02em;
+    }
+
+    .price {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 12px;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .price small {
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .price-list {
+      display: grid;
+      gap: 12px;
+      margin: 18px 0 24px;
+    }
+
+    .price-list div {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--muted);
+    }
+
+    .step-num {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--pink), #8f2cff);
+      margin-bottom: 16px;
+      box-shadow: 0 14px 28px rgba(255,77,154,0.24);
+    }
+
+    .cta-band {
+      padding: 34px;
+      border-radius: 28px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: linear-gradient(135deg, rgba(255,77,154,0.12), rgba(143,44,255,0.12));
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-band h2 {
+      margin-bottom: 10px;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    }
+
+    .cta-band p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 620px;
+    }
+
+    ul.clean {
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .row-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: var(--white);
+      font: inherit;
+      outline: none;
+    }
+
+    input::placeholder,
+    textarea::placeholder { color: #cfd3df; }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    footer {
+      padding: 34px 0 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: rgba(4, 8, 18, 0.68);
+    }
+
+    .footer-note {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #c2c8d7;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid-premium,
+      .grid-2,
+      .contact-grid,
+      .footer-grid,
+      .pricing-grid,
+      .portfolio-grid,
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-screen-wrap {
+        transform: none;
+        animation: none;
+      }
+
+      .price-card.featured { transform: none; }
+    }
+
+    @media (max-width: 1100px) {
+      .hero-card,
+      .grid-2,
+      .contact-grid,
+      .footer-grid,
+      .pricing-grid,
+      .portfolio-grid,
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card { min-height: auto; }
+      .price-card.featured { transform: none; }
+    }
+
+    @media (max-width: 920px) {
+  .logo-img {
+    height: 50px;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 84px;
+    left: 0;
+    right: 0;
+    background: rgba(8, 12, 26, 0.98);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 18px 14px 22px;
+  }
+
+  nav.open { display: block; }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle { display: block; }
+  .desktop-cta { display: none; }
+
+  .hero-points,
+  .row-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .logo-img {
+    height: 44px;
+  }
+
+  .hero { padding-top: 24px; }
+  .hero-premium { padding: 20px; }
+  .container { width: min(var(--max), calc(100% - 18px)); }
+  .hero h1 { font-size: 2.55rem; }
+  section { padding: 66px 0; }
+  .cta-band { padding: 24px; }
+  .hero-points-premium { gap: 10px; }
+
+  .hero-point-pill {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+       
+    
+
+          
+
+    .proof-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+      max-width: 760px;
+    }
+
+    .proof-item {
+      padding: 15px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .proof-item strong {
+      display:block;
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+
+    .proof-item span {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .microcopy {
+      color: #f7c6dd;
+      font-weight: 800;
+      font-size: .92rem;
+      margin-top: -8px;
+      margin-bottom: 18px;
+    }
+
+    .result-list {
+      display:grid;
+      gap: 9px;
+      margin-top: 16px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: .93rem;
+    }
+
+    .trust-note {
+      margin-top: 14px;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,77,154,.08);
+      border: 1px solid rgba(255,77,154,.18);
+      color: #f3d7e7;
+      font-weight: 700;
+      font-size: .94rem;
+    }
+
+    .urgency-line {
+      margin-top: -12px;
+      margin-bottom: 24px;
+      color: #ffd7e9;
+      font-weight: 800;
+      letter-spacing: .01em;
+    }
+
+    @media (max-width: 920px) {
+      .proof-strip { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .proof-strip { grid-template-columns: 1fr; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QN22FVG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="Rinko Digital home">
+        <img src="assets/rinko-digital-logo.png" alt="Rinko Digital logo" class="logo-img" />
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+      <nav id="siteNav">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn desktop-cta" href="#contact" data-track="quote_click">Request a Website Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-premium">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-grid-premium">
+          <div class="hero-copy-premium reveal visible">
+            <div class="eyebrow">Rinko Digital • Websites for local service businesses</div>
+            <h1>Turn your business into a <span class="accent">premium brand online.</span></h1>
+            <p>Premium, conversion-focused websites for local service businesses that want more trust, stronger branding, and more quote requests online.</p>
+            <div class="hero-actions">
+              <a class="btn" href="#contact" data-track="quote_click">Get Your Website Quote Today</a>
+              <a class="btn-outline" href="#portfolio" data-track="portfolio_click">View Real Projects</a>
+            </div>
+            <div class="hero-points-premium">
+              <div class="hero-point-pill">✔ Fast delivery</div>
+              <div class="hero-point-pill">✔ Mobile optimized</div>
+              <div class="hero-point-pill">✔ Built to convert</div>
+            </div>
+          </div>
+
+          <div class="hero-visual-premium reveal visible">
+            <div class="hero-screen-wrap floating-card">
+              <div class="hero-screen-glow"></div>
+              <div class="hero-screen">
+                <div class="window-bar">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="visual-inner">
+                  <div class="device">
+                    <div class="mini-brand">
+                      <img src="assets/rinko-digital-logo.png" alt="Rinko Digital" style="height:34px; width:auto; object-fit:contain;" />
+                    </div>
+                    <div class="device-hero">
+                      <h3>Premium brand. Better leads.</h3>
+                      <p>A website designed to build trust and turn visitors into quote requests.</p>
+                    </div>
+                    <div class="device-grid">
+                      <div class="device-box">Web Design</div>
+                      <div class="device-box">SEO Setup</div>
+                      <div class="device-box">Mobile Ready</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>A website system built to turn visitors into quote requests.</h2>
+          <p>You need more than a pretty homepage. You need clear messaging, strong calls-to-action, mobile-first design, and a quote flow that makes it easy for customers to contact you.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card reveal">
+            <div class="icon">💻</div>
+            <h3>Website Design</h3>
+            <p>Modern one-page and multi-page websites for service businesses, local brands, and growing companies.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon">📱</div>
+            <h3>Mobile Optimization</h3>
+            <p>Your website will look clean and professional on mobile, where most customers first find you.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon">📈</div>
+            <h3>SEO Basics</h3>
+            <p>Foundations for local search, including structure, headings, messaging, and conversion-focused content.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Portfolio</h2>
+          <p>Real business websites and brand-focused landing pages built to help small businesses look professional and convert more customers online.</p>
+        </div>
+        <div class="portfolio-grid">
+          <article class="portfolio-card reveal">
+            <div class="portfolio-thumb">
+              <img src="assets/rinko-delivery-preview.png" alt="Rinko Delivery website preview" style="width:100%; height:100%; object-fit:cover; border-radius:14px;" />
+            </div>
+            <h3>Rinko Delivery Website</h3>
+            <p>Modern courier website with a strong hero section, service pages, quote calculator, Google Maps route tool, and mobile-friendly layout.</p><div class="result-list"><span>✔ Built quote system</span><span>✔ Mobile-first delivery UX</span><span>✔ Lead-focused structure</span></div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
+              <span class="price-tag">Delivery Brand</span>
+              <span class="price-tag">Quote Flow</span>
+              <span class="price-tag">Mobile Ready</span>
+            </div>
+            <div class="portfolio-actions">
+              <a class="portfolio-link" href="https://rinkodelivery.com" data-track="portfolio_project_click" target="_blank" rel="noopener">View Project</a>
+              <a class="portfolio-secondary" href="#contact" data-track="quote_click">Build Something Like This</a>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="portfolio-thumb">
+              <img src="assets/unicare-cleaning-preview.png" alt="UniCare Cleaning website preview" style="width:100%; height:100%; object-fit:cover; border-radius:14px;" />
+            </div>
+            <h3>UniCare Cleaning Website</h3>
+            <p>Premium dark-style cleaning website with service presentation, instant estimate calculator, booking flow, and a polished trust-building layout.</p><div class="result-list"><span>✔ Premium service positioning</span><span>✔ Estimate calculator concept</span><span>✔ Trust-focused visual style</span></div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
+              <span class="price-tag">Service Business</span>
+              <span class="price-tag">Calculator</span>
+              <span class="price-tag">Luxury Style</span>
+            </div>
+            <div class="portfolio-actions">
+              <a class="portfolio-link" href="https://www.unicarecleaning.com" data-track="portfolio_project_click" target="_blank" rel="noopener">View Project</a>
+              <a class="portfolio-secondary" href="#contact" data-track="quote_click">Request a Similar Site</a>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="portfolio-thumb">
+              <img src="assets/starter-business-preview.png" alt="Starter business landing page preview" style="width:100%; height:100%; object-fit:cover; border-radius:14px;" />
+            </div>
+            <h3>Starter Business Landing Page</h3>
+            <p>A flexible concept for barbers, cleaners, delivery companies, contractors, and other local service brands that need a fast professional launch.</p><div class="result-list"><span>✔ Clear offer</span><span>✔ Fast launch structure</span><span>✔ Lead-focused layout</span></div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
+              <span class="price-tag">Landing Page</span>
+              <span class="price-tag">Fast Launch</span>
+              <span class="price-tag">Lead Focused</span>
+            </div>
+            <div class="portfolio-actions">
+              <a class="portfolio-link" href="#contact">View Project</a>
+              <a class="portfolio-secondary" href="#pricing">See Pricing</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Premium pricing for business owners who want results</h2>
+          <p>Clear packages help serious clients choose the right level of website without endless back-and-forth.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="price-card reveal">
+            <div class="price-tag">Starter</div>
+            <h3>One-Page Website</h3>
+            <div class="price">$150 <small>starting</small></div>
+            <p>Perfect for small businesses that need a clean, professional online presence without overcomplicating the build.</p>
+            <div class="price-list">
+              <div>✔ One-page layout</div>
+              <div>✔ Mobile-friendly design</div>
+              <div>✔ Contact form</div>
+              <div>✔ Clean conversion-focused structure</div>
+            </div>
+            <a class="btn-outline" href="#contact" data-track="quote_click">Request Starter Quote</a>
+          </div>
+
+          <div class="price-card featured reveal">
+            <div class="price-tag">Most Popular</div>
+            <h3>Business Website</h3>
+            <div class="price">$350 <small>starting</small></div>
+            <p>For businesses that want a complete website with stronger structure, branding, and a more premium customer-facing experience.</p>
+            <div class="price-list">
+              <div>✔ Up to 5 pages</div>
+              <div>✔ Mobile optimization</div>
+              <div>✔ SEO basics</div>
+              <div>✔ Professional layout system</div>
+            </div>
+            <a class="btn" href="#contact" data-track="quote_click">Get Your Website Quote Today</a>
+          </div>
+
+          <div class="price-card reveal">
+            <div class="price-tag">Custom</div>
+            <h3>Custom Project</h3>
+            <div class="price">$500 <small>and up</small></div>
+            <p>Best for redesigns, larger websites, advanced sections, custom flows, or more tailored business solutions.</p>
+            <div class="price-list">
+              <div>✔ Custom scope</div>
+              <div>✔ Strategy support</div>
+              <div>✔ Design flexibility</div>
+              <div>✔ Growth-focused setup</div>
+            </div>
+            <a class="btn-outline" href="#contact" data-track="quote_click">Request Custom Scope</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>A simple process from idea to launch</h2>
+          <p>Keep the experience easy for your clients. You can walk them through these steps during your sales conversation.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <div class="step-num">1</div>
+            <h3>Tell me about your business</h3>
+            <p>You share what your business does, what pages you need, and the style you want.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">2</div>
+            <h3>Design and structure</h3>
+            <p>I create a clean, modern layout focused on trust, clarity, and conversions.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">3</div>
+            <h3>Review and refine</h3>
+            <p>You review the design and request adjustments before the final version goes live.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">4</div>
+            <h3>Launch your website</h3>
+            <p>Your site goes live and your business starts looking more professional online.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2>Ready to look like the premium option?</h2>
+            <p>Let’s build a website that makes your business look trusted, professional, and easier to contact.</p>
+          </div>
+          <a class="btn" href="#contact" data-track="quote_click">Request Your Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div class="panel reveal">
+          <h3>Tell me what you want to build</h3>
+          <p>Send a short request and I’ll review the project scope, website type, and best next step for your business.</p>
+          <ul class="clean" style="margin-top:18px;">
+            <li>Email: contact@rinkodigital.com</li>
+            <li>Instagram: @rinkodigital.studio</li>
+            <li>Based in Washington, serving clients online</li>
+          </ul>
+        </div>
+
+        <div class="panel reveal">
+          <h3>Request a website quote</h3><p class="microcopy">Most projects start with a quick scope review.</p>
+          <form id="contact-form" action="/.netlify/functions/brevo-lead" method="POST">
+            <input type="hidden" name="source" value="rinkodigital.com" />
+            <div class="row-2">
+              <input type="text" name="name" placeholder="Name" required />
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="row-2">
+              <select name="language" required>
+                <option value="" disabled selected>Preferred language</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="pt">Português</option>
+              </select>
+              <input type="text" name="business_name" placeholder="Business name" />
+            </div>
+            <div class="row-2">
+              <select name="website_type" required>
+                <option value="" disabled selected>Website type</option>
+                <option value="One-page website">One-page website</option>
+                <option value="Business website">Business website</option>
+                <option value="Custom project">Custom project</option>
+              </select>
+            </div>
+            <textarea name="message" placeholder="Tell me about your project" required></textarea>
+            <button class="btn" type="submit" data-track="lead_submit_attempt">Send Website Request</button>
+            <div class="trust-note">No pressure. Send the project details and I’ll reply with the best next step for your website.</div>
+          </form>
+          <p id="form-status" style="display:none; margin-top:14px; color:#cfd5e6; font-weight:700;">Thanks! Your request was sent.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px;">
+          <img src="assets/rinko-digital-logo.png" alt="Rinko Digital logo" class="logo-img" />
+        </div>
+        <p style="color: var(--muted); margin: 0; max-width: 520px;">Modern websites for small businesses that want to look professional and grow online.</p>
+      </div>
+      <div>
+        <h3 style="margin-top:0;">Quick links</h3>
+        <ul class="clean">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-note">
+      <span>© 2026 Rinko Digital. All rights reserved.</span>
+      <span>Premium websites for local service businesses.</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const siteNav = document.getElementById('siteNav');
+
+    if (menuToggle && siteNav) {
+      menuToggle.addEventListener('click', () => {
+        siteNav.classList.toggle('open');
+      });
+
+      document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => siteNav.classList.remove('open'));
+      });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    window.dataLayer = window.dataLayer || [];
+    function rinkoDigitalTrack(eventName, payload = {}) {
+      window.dataLayer.push({
+        event: eventName,
+        page_path: window.location.pathname,
+        page_title: document.title,
+        ...payload
+      });
+    }
+
+    rinkoDigitalTrack('rinko_digital_page_view');
+
+    document.querySelectorAll('[data-track]').forEach(el => {
+      el.addEventListener('click', () => {
+        rinkoDigitalTrack(el.getAttribute('data-track'), {
+          button_text: (el.innerText || '').trim(),
+          target: el.getAttribute('href') || ''
+        });
+      });
+    });
+
+    if (contactForm) {
+      let formStarted = false;
+      contactForm.addEventListener('input', () => {
+        if (!formStarted) {
+          formStarted = true;
+          rinkoDigitalTrack('form_start');
+        }
+      });
+
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+
+        try {
+          const formData = new FormData(contactForm);
+          const payload = Object.fromEntries(formData.entries());
+
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: JSON.stringify(payload),
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            rinkoDigitalTrack('lead_submit', {
+              website_type: contactForm.querySelector('[name="website_type"]')?.value || ''
+            });
+            contactForm.reset();
+            if (formStatus) {
+              formStatus.style.display = 'block';
+              formStatus.textContent = 'Thanks! Your request was sent.';
+            }
+          } else {
+            if (formStatus) {
+              formStatus.style.display = 'block';
+              formStatus.textContent = 'Something went wrong. Please try again.';
+            }
+          }
+        } catch (error) {
+          if (formStatus) {
+            formStatus.style.display = 'block';
+            formStatus.textContent = 'Something went wrong. Please try again.';
+          }
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = originalText;
+        }
+      });
+    }
+  </script>
+</body>
+</html>
