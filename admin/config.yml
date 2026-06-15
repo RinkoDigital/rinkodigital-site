@@ -75,7 +75,6 @@ collections:
           - { label: "Link Essential Stripe", name: "stripe_essential_url", widget: "string", required: false }
           - { label: "Link Professional Stripe", name: "stripe_professional_url", widget: "string", required: false }
           - { label: "Link Custom Payment Stripe", name: "stripe_custom_url", widget: "string", required: false }
-
   - name: "portfolio_settings"
     label: "Portfólio"
     files:

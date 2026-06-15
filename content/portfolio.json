@@ -59,21 +59,6 @@
       "image": "/assets/yas-literaria-preview.png",
       "url": "",
       "status": "coming_soon"
-    },
-    {
-      "title": "TJN Services LLC",
-      "slug": "tjn-services",
-      "order": 5,
-      "published": true,
-      "category_pt": "Construção e Remodelação",
-      "category_en": "Construction & Remodeling",
-      "category_es": "Construcción y Remodelación",
-      "description_pt": "Website profissional desenvolvido para empresa de construção residencial especializada em drywall, pintura, pisos e remodelações.",
-      "description_en": "Professional website developed for a residential construction company specializing in drywall, painting, flooring, and remodeling services.",
-      "description_es": "Sitio web profesional desarrollado para una empresa de construcción residencial especializada en drywall, pintura, pisos y remodelaciones.",
-      "image": "/assets/tjn-services-preview.png",
-      "url": "https://tjnservicesllc.com",
-      "status": "live"
     }
   ]
 }
