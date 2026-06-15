@@ -1,6 +1,21 @@
 {
   "projects": [
     {
+      "category_pt": "Construção e Remodelação",
+      "description_pt": "Website profissional desenvolvido para empresa de construção residencial especializada em drywall, pintura, pisos e remodelações.",
+      "category_en": "Construction & Remodeling",
+      "slug": "tjn-services",
+      "description_en": "Professional website developed for a residential construction company specializing in drywall, painting, flooring, and remodeling services.",
+      "published": true,
+      "order": 0,
+      "url": "https://tjnservicesllc.com",
+      "category_es": "Construcción y Remodelación",
+      "description_es": "Sitio web profesional desarrollado para una empresa de construcción residencial especializada en drywall, pintura, pisos y remodelaciones.",
+      "status": "live",
+      "title": "TJN Services LLC",
+      "image": "/static/uploads/tjn-services-portfolio-real-original.png"
+    },
+    {
       "category_pt": "Entrega Local",
       "description_pt": "Landing page para serviço de entrega local, com fluxo de contato, credibilidade e foco em conversão.",
       "category_en": "Local Delivery",
@@ -59,21 +74,6 @@
       "status": "coming_soon",
       "title": "Yas Literária",
       "image": "/assets/yas-literaria-preview.png"
-    },
-    {
-      "category_pt": "Construção e Remodelação",
-      "description_pt": "Website profissional desenvolvido para empresa de construção residencial especializada em drywall, pintura, pisos e remodelações.",
-      "category_en": "Construction & Remodeling",
-      "slug": "tjn-services",
-      "description_en": "Professional website developed for a residential construction company specializing in drywall, painting, flooring, and remodeling services.",
-      "published": true,
-      "order": 1,
-      "url": "https://tjnservicesllc.com",
-      "category_es": "Construcción y Remodelación",
-      "description_es": "Sitio web profesional desarrollado para una empresa de construcción residencial especializada en drywall, pintura, pisos y remodelaciones.",
-      "status": "live",
-      "title": "TJN Services LLC",
-      "image": "/static/uploads/tjn-services-portfolio-real-original.png"
     }
   ]
 }
