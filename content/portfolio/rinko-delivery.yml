@@ -1,0 +1,13 @@
+title: "Rinko Delivery"
+slug: "rinko-delivery"
+order: 2
+published: true
+category_pt: "Entrega Local"
+category_en: "Local Delivery"
+category_es: "Entrega Local"
+description_pt: "Landing page para serviço de entrega local, com fluxo de contato, credibilidade e foco em conversão."
+description_en: "Landing page for a local delivery company focused on credibility, contact flow, and conversions."
+description_es: "Landing page para empresa de entregas locales enfocada en credibilidad, flujo de contacto y conversiones."
+image: "/assets/rinko-delivery-preview.png"
+url: "https://rinkodelivery.com"
+status: "live"

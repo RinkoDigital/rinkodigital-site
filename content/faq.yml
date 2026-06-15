@@ -1,0 +1,13 @@
+faq:
+  - question_pt: "Quanto custa um site com a Rinko Digital?"
+    answer_pt: "Os valores variam conforme o escopo do projeto, geralmente entre $150 e $1.500+. No formulário de contato você escolhe a faixa de orçamento e enviamos uma proposta personalizada."
+    question_en: "How much does a website with Rinko Digital cost?"
+    answer_en: "Prices vary based on project scope, generally between $150 and $1,500+. In the contact form you can select your budget range and we'll send a tailored proposal."
+    question_es: "¿Cuánto cuesta un sitio web con Rinko Digital?"
+    answer_es: "Los precios varían según el alcance del proyecto, generalmente entre $150 y $1.500+. En el formulario de contacto eliges el rango de presupuesto y enviamos una propuesta personalizada."
+  - question_pt: "Quanto tempo leva para o site ficar pronto?"
+    answer_pt: "Projetos simples costumam levar de 1 a 2 semanas. Sites institucionais ou com mais páginas levam de 3 a 6 semanas, dependendo do escopo."
+    question_en: "How long does it take to build a website?"
+    answer_en: "Simple projects usually take 1-2 weeks. Institutional or multi-page websites take 3-6 weeks, depending on scope."
+    question_es: "¿Cuánto tiempo tarda en estar listo el sitio?"
+    answer_es: "Proyectos simples suelen tardar de 1 a 2 semanas. Sitios institucionales o con más páginas tardan de 3 a 6 semanas, según el alcance."

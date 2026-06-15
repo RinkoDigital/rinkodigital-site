@@ -1,0 +1,19 @@
+# Rinko Digital
+
+> Rinko Digital cria sites premium, branding, páginas otimizadas para SEO/GEO, automações com IA e experiências digitais para negócios que querem crescer online. Sede em Washington, EUA, atendimento em português, inglês e espanhol.
+
+## Serviços
+- Web Design: sites modernos, responsivos e focados em conversão.
+- Desenvolvimento: soluções web robustas, rápidas e escaláveis.
+- Branding: identidade de marca forte e alinhada com o propósito do negócio.
+- SEO & GEO: otimização para mecanismos de busca tradicionais (Google) e mecanismos de busca com IA (ChatGPT, Perplexity, Google AI Overviews).
+- Automação com IA: automação de processos e aumento de eficiência operacional.
+- Estratégia Digital: planejamento estratégico focado em resultados mensuráveis.
+
+## Páginas
+- [Página inicial](https://rinkodigital.com/): visão geral dos serviços, processo de trabalho e formulário de contato.
+- [Portfólio](https://rinkodigital.com/portfolio.html): projetos realizados, incluindo UniCare Cleaning, Rinko Delivery, Uni Parental e Yas Literária.
+
+## Contato
+- Email: contact@rinkodigital.com
+- Site: https://rinkodigital.com

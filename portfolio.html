@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Portfólio | Rinko Digital</title>
+  <meta name="description" content="Conheça os projetos da Rinko Digital: sites premium para limpeza, delivery, parentalidade e literatura, criados com foco em design, conversão e resultados." />
+  <link rel="canonical" href="https://rinkodigital.com/portfolio.html" />
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+  <meta property="og:title" content="Portfólio | Rinko Digital" />
+  <meta property="og:description" content="Conheça os projetos da Rinko Digital: sites premium criados com foco em design, conversão e resultados." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rinkodigital.com/portfolio.html" />
+  <meta property="og:image" content="https://rinkodigital.com/assets/rinko-hero-bg.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Rinko Digital" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfólio | Rinko Digital" />
+  <meta name="twitter:description" content="Conheça os projetos da Rinko Digital: sites premium criados com foco em design, conversão e resultados." />
+  <meta name="twitter:image" content="https://rinkodigital.com/assets/rinko-hero-bg.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "Arial", "sans-serif"],
+            serif: ["Cormorant Garamond", "Georgia", "serif"]
+          },
+          colors: {
+            rinko: {
+              black: "#020202",
+              panel: "#080606",
+              red: "#e3261d",
+              red2: "#ff3b32",
+              white: "#f7f1eb",
+              muted: "#bdb4ad"
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body{background:#020202}
+    .hero-bg{
+      background:
+        linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.80) 33%,rgba(0,0,0,.12) 60%,rgba(0,0,0,.28) 100%),
+        linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.16) 60%,rgba(0,0,0,.72) 100%),
+        url("assets/rinko-hero-bg.png") center top / cover no-repeat;
+    }
+
+    .dark-section{
+      background:
+        linear-gradient(180deg,rgba(0,0,0,.86),rgba(0,0,0,.92)),
+        radial-gradient(circle at 14% 22%,rgba(227,38,29,.10),transparent 26%),
+        radial-gradient(circle at 88% 80%,rgba(227,38,29,.12),transparent 24%),
+        url("assets/rinko-hero-bg.png") center top / cover no-repeat fixed;
+    }
+
+    .wave-bg{
+      background:
+        linear-gradient(180deg,rgba(0,0,0,.84),rgba(0,0,0,.91)),
+        repeating-radial-gradient(ellipse at 50% 100%,rgba(227,38,29,.10) 0 1px,transparent 1px 26px),
+        url("assets/rinko-hero-bg.png") center top / cover no-repeat fixed;
+    }
+
+    .field{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(0,0,0,.38);
+      color:#fff;
+      min-height:48px;
+      padding:0 16px;
+      outline:none;
+      font-size:13px;
+      border-radius:0;
+    }
+    .field:focus{
+      border-color:rgba(227,38,29,.82);
+      box-shadow:0 0 0 3px rgba(227,38,29,.12);
+    }
+    textarea.field{
+      padding:16px;
+      min-height:126px;
+    }
+    select option{
+      background:#080303;
+      color:#fff;
+    }
+
+    .petal{
+      position:absolute;
+      width:9px;
+      height:6px;
+      border-radius:80% 20% 80% 20%;
+      background:linear-gradient(135deg,#ff6b62,#8b0907);
+      opacity:.48;
+      filter:drop-shadow(0 0 8px rgba(227,38,29,.45));
+      animation:fall linear infinite;
+    }
+    .petal:nth-child(1){left:12%;top:-8%;animation-duration:16s;animation-delay:-3s}
+    .petal:nth-child(2){left:28%;top:-8%;animation-duration:21s;animation-delay:-9s}
+    .petal:nth-child(3){left:45%;top:-8%;animation-duration:15s;animation-delay:-6s}
+    .petal:nth-child(4){left:64%;top:-8%;animation-duration:19s;animation-delay:-12s}
+    .petal:nth-child(5){left:80%;top:-8%;animation-duration:17s;animation-delay:-4s}
+    .petal:nth-child(6){left:92%;top:-8%;animation-duration:22s;animation-delay:-13s}
+    @keyframes fall{
+      0%{transform:translate3d(0,-10vh,0) rotate(0deg)}
+      50%{transform:translate3d(-70px,54vh,0) rotate(220deg)}
+      100%{transform:translate3d(70px,110vh,0) rotate(480deg)}
+    }
+    @media(max-width:768px){
+      .dark-section,.wave-bg{
+        background-attachment:scroll;
+        background-position:center top;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Portfólio Rinko Digital",
+    "itemListElement": [
+      {
+        "@type": "CreativeWork",
+        "position": 1,
+        "name": "UniCare Cleaning",
+        "description": "Website premium para serviço local de limpeza, com foco em confiança e solicitação de atendimento.",
+        "url": "https://unicarecleaning.com",
+        "image": "https://rinkodigital.com/assets/uni-care-cleaning-preview.png"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 2,
+        "name": "Rinko Delivery",
+        "description": "Landing page para serviço de entrega local, com foco em conversão.",
+        "url": "https://rinkodelivery.com",
+        "image": "https://rinkodigital.com/assets/rinko-delivery-preview.png"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 3,
+        "name": "Uni Parental",
+        "description": "Website institucional para uma plataforma de apoio familiar, com visual cinematográfico e experiência acolhedora.",
+        "image": "https://rinkodigital.com/assets/uni-parental-preview.png"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 4,
+        "name": "Yas Literária",
+        "description": "Website institucional para uma plataforma literária dedicada à produção editorial, eventos e conexões criativas.",
+        "image": "https://rinkodigital.com/assets/yas-literaria-preview.png"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-rinko-black text-rinko-white font-sans overflow-x-hidden">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-rinko-red/20">
+    <div class="max-w-[1536px] mx-auto px-12 max-lg:px-7 max-sm:px-5 h-[92px] flex items-center justify-between gap-8">
+      <a href="index.html#home" class="shrink-0 flex items-center gap-4">
+        <img src="assets/rinko-logo.png" alt="Rinko Digital logo" class="w-[250px] max-sm:w-[180px] drop-shadow-[0_8px_22px_rgba(227,38,29,.35)]">
+      </a>
+
+      <button id="menu" class="hidden max-md:block text-3xl text-white">☰</button>
+
+      <nav id="nav" class="max-md:hidden max-md:absolute max-md:top-[92px] max-md:left-0 max-md:right-0 max-md:bg-black/95 max-md:p-7">
+        <ul class="flex max-md:grid items-center gap-10 max-lg:gap-6 uppercase text-[13px] font-extrabold tracking-[.05em]">
+          <li><a data-i18n="nav_home" class="hover:text-rinko-red2" href="index.html#home">Início</a></li>
+          <li><a data-i18n="nav_services" class="hover:text-rinko-red2" href="index.html#services">Serviços</a></li>
+          <li><a data-i18n="nav_portfolio" class="text-rinko-red2 border-b-2 border-rinko-red pb-3" href="portfolio.html">Portfólio</a></li>
+          <li><a data-i18n="nav_about" class="hover:text-rinko-red2" href="index.html#process">Sobre</a></li>
+          <li><a data-i18n="nav_contact" class="hover:text-rinko-red2" href="index.html#contact">Contato</a></li>
+        </ul>
+
+        <div class="hidden max-md:flex gap-2 mt-6">
+          <button type="button" data-lang-btn="pt" class="lang-btn border border-rinko-red/60 text-rinko-red2 px-3 py-2 text-xs font-black">PT</button>
+          <button type="button" data-lang-btn="en" class="lang-btn border border-white/15 text-white/80 px-3 py-2 text-xs font-black">EN</button>
+          <button type="button" data-lang-btn="es" class="lang-btn border border-white/15 text-white/80 px-3 py-2 text-xs font-black">ES</button>
+        </div>
+      </nav>
+
+      <div class="flex items-center gap-3 max-md:hidden">
+        <button type="button" data-lang-btn="pt" class="lang-btn border border-rinko-red/60 text-rinko-red2 px-3 py-2 text-xs font-black">PT</button>
+        <button type="button" data-lang-btn="en" class="lang-btn border border-white/15 text-white/80 px-3 py-2 text-xs font-black">EN</button>
+        <button type="button" data-lang-btn="es" class="lang-btn border border-white/15 text-white/80 px-3 py-2 text-xs font-black">ES</button>
+      </div>
+
+      <a data-i18n="nav_cta" href="index.html#contact" class="max-lg:hidden uppercase text-[13px] font-black tracking-[.08em] border border-rinko-red/70 text-rinko-red2 rounded-xl px-7 h-[52px] inline-flex items-center justify-center hover:bg-rinko-red hover:text-white transition">Fale conosco ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="work" class="wave-bg pt-40 pb-24 max-md:pt-32 max-md:pb-16 border-b border-rinko-red/20 min-h-screen">
+      <div class="max-w-[1536px] mx-auto px-12 max-lg:px-7 max-sm:px-5">
+        <div class="grid grid-cols-[380px_1fr] max-xl:grid-cols-1 gap-16 max-xl:gap-12 items-start">
+          <div>
+            <div data-i18n="portfolio_kicker" class="text-rinko-red2 uppercase tracking-[.16em] font-black text-xs mb-4">Portfólio</div>
+
+            <h1 class="font-serif text-[clamp(38px,3.8vw,68px)] leading-[.98] tracking-[-.035em] mb-5">
+              <span data-i18n="portfolio_title">Projetos que geram resultados reais.</span>
+            </h1>
+
+            <div class="w-14 h-[2px] bg-rinko-red mb-6 shadow-[0_0_20px_rgba(227,38,29,.75)]"></div>
+
+            <p data-i18n="portfolio_text" class="text-rinko-muted leading-relaxed mb-7 max-w-[350px]">
+              Cada projeto é único. Cada detalhe é pensado para criar experiências que conectam, engajam e convertem.
+            </p>
+</div>
+
+          <div id="portfolio-grid" class="grid grid-cols-2 max-md:grid-cols-1 gap-6">
+            <div class="col-span-2 max-md:col-span-1 border border-white/10 bg-black/70 backdrop-blur-[2px] p-8 text-rinko-muted">
+              Carregando projetos do CMS...
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer class="bg-black py-7">
+    <div class="max-w-[1536px] mx-auto px-12 max-lg:px-7 max-sm:px-5 flex max-md:flex-col items-center justify-between gap-6 text-sm text-rinko-muted">
+      <img src="assets/rinko-logo.png" alt="Rinko Digital" class="w-[190px]">
+      <span>© 2026 Rinko Digital. Premium Websites & Digital Experiences.</span>
+      <div class="flex gap-7 text-rinko-red2 font-black">
+        <span>IG</span><span>Be</span><span>in</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "Arial", "sans-serif"],
+            serif: ["Cormorant Garamond", "Georgia", "serif"]
+          },
+          colors: {
+            rinko: {
+              black: "#020202",
+              panel: "#080606",
+              red: "#e3261d",
+              red2: "#ff3b32",
+              white: "#f7f1eb",
+              muted: "#bdb4ad"
+            }
+          }
+        }
+      }
+    }
+  </script>
+<script>
+    const translations = {
+      pt: {
+        nav_home:"Início", nav_services:"Serviços", nav_portfolio:"Portfólio", nav_about:"Sobre", nav_contact:"Contato", nav_cta:"Fale conosco ↗",
+        hero_eyebrow:"デジタルの力で、アイデアを現実に。",
+        hero_title:'Transformamos ideias em <span class="text-rinko-red2">experiências</span> digitais memoráveis.',
+        hero_text:"Soluções digitais completas que combinam design, tecnologia e estratégia para impulsionar marcas e gerar resultados reais.",
+        hero_cta:"Começar projeto →", hero_portfolio:"Ver portfólio",
+        services_kicker:"Nossos serviços", services_title:"Soluções que impulsionam o seu negócio",
+        service_web:"Web Design", service_dev:"Desenvolvimento", service_brand:"Branding", service_seo:"SEO & GEO", service_ai:"Automação com IA", service_strategy:"Estratégia Digital",
+        service_web_text:"Sites modernos, responsivos e focados em conversão.",
+        service_dev_text:"Soluções web robustas, rápidas e escaláveis.",
+        service_brand_text:"Marcas fortes, memoráveis e alinhadas com propósito.",
+        service_seo_text:"Seja encontrado no Google e em buscas com IA.",
+        service_ai_text:"Automatize processos e aumente sua eficiência.",
+        service_strategy_text:"Planejamento estratégico focado em resultados.",
+        portfolio_kicker:"Portfólio", portfolio_title:"Projetos que geram resultados reais.", portfolio_text:"Cada projeto é único. Cada detalhe é pensado para criar experiências que conectam, engajam e convertem.", project_unicare_category:"Serviço de Limpeza", project_unicare_desc:"Website premium para serviço local com foco em confiança, apresentação de serviços e solicitação de atendimento.", project_delivery_category:"Entrega Local", project_delivery_desc:"Landing page para serviço de entrega local, com fluxo de contato, credibilidade e foco em conversão.", project_yas_category:"Plataforma Literária", project_yas_desc:"Projeto de website institucional para uma plataforma literária dedicada à produção editorial, eventos e conexões criativas.", project_uniparental_category:"Projeto Institucional", project_uniparental_desc:"Website institucional para uma plataforma de apoio familiar, com visual cinematográfico e experiência acolhedora.", visit_website:"Visitar site →", coming_soon:"Em breve", 
+        process_kicker:"Nosso processo", process_title:"Do conceito ao lançamento.",
+        step1_title:"Descobrir", step1_text:"Entendemos seu negócio, objetivos e público.",
+        step2_title:"Planejar", step2_text:"Estratégia, estrutura e design alinhados ao seu objetivo.",
+        step3_title:"Desenvolver", step3_text:"Transformamos o plano em um site rápido, seguro e moderno.",
+        step4_title:"Lançar", step4_text:"Testamos tudo e colocamos seu projeto no ar com excelência.",
+        step5_title:"Crescer", step5_text:"Acompanhamos, otimizamos e impulsionamos seus resultados.",
+        contact_kicker:"Vamos conversar?", contact_title:"Pronto para tirar sua ideia do papel?", contact_text:"Preencha o formulário e entraremos em contato em breve para entender seu projeto.",
+        form_name:"Nome", form_email:"Email", form_language:"Idioma preferido", form_business:"Nome da empresa", form_budget:"Orçamento estimado", form_service:"O que você precisa?", form_message:"Conte sobre seu projeto",
+        form_landing:"Landing Page", form_redesign:"Redesign de website", form_branding_site:"Branding + Website", form_webapp:"Web App / Solução personalizada", form_submit:"Enviar solicitação →"
+      },
+      en: {
+        nav_home:"Home", nav_services:"Services", nav_portfolio:"Portfolio", nav_about:"About", nav_contact:"Contact", nav_cta:"Contact us ↗",
+        hero_eyebrow:"デジタルの力で、アイデアを現実に。",
+        hero_title:'We turn ideas into memorable digital <span class="text-rinko-red2">experiences</span>.',
+        hero_text:"Complete digital solutions combining design, technology, and strategy to help brands grow and generate real results.",
+        hero_cta:"Start a project →", hero_portfolio:"View portfolio",
+        services_kicker:"Our services", services_title:"Digital solutions that move your business forward",
+        service_web:"Web Design", service_dev:"Development", service_brand:"Branding", service_seo:"SEO & GEO", service_ai:"AI Automation", service_strategy:"Digital Strategy",
+        service_web_text:"Modern, responsive websites focused on conversion.",
+        service_dev_text:"Robust, fast, and scalable web solutions.",
+        service_brand_text:"Strong, memorable brands aligned with purpose.",
+        service_seo_text:"Get found on Google and AI-powered search.",
+        service_ai_text:"Automate processes and increase efficiency.",
+        service_strategy_text:"Strategic planning focused on measurable results.",
+        portfolio_kicker:"Portfolio", portfolio_title:"Projects built to generate real results.", portfolio_text:"Every project is unique. Every detail is designed to create experiences that connect, engage, and convert.", project_unicare_category:"Cleaning Service", project_unicare_desc:"Premium website for a local cleaning service focused on trust, service presentation, and lead generation.", project_delivery_category:"Local Delivery", project_delivery_desc:"Landing page for a local delivery company focused on credibility, contact flow, and conversions.", project_yas_category:"Literary Platform", project_yas_desc:"Institutional website project for a literary platform focused on editorial production, events, and creative connections.", project_uniparental_category:"Institutional Project", project_uniparental_desc:"Institutional website for a family support platform with a cinematic visual identity and welcoming experience.", visit_website:"Visit website →", coming_soon:"Coming soon", 
+        process_kicker:"Our process", process_title:"From concept to launch.",
+        step1_title:"Discover", step1_text:"We understand your business, goals, and audience.",
+        step2_title:"Plan", step2_text:"Strategy, structure, and design aligned with your goals.",
+        step3_title:"Develop", step3_text:"We turn the plan into a fast, secure, modern website.",
+        step4_title:"Launch", step4_text:"We test everything and launch your project with care.",
+        step5_title:"Grow", step5_text:"We monitor, optimize, and help improve your results.",
+        contact_kicker:"Let’s talk?", contact_title:"Ready to bring your idea to life?", contact_text:"Fill out the form and we’ll contact you shortly to understand your project.",
+        form_name:"Name", form_email:"Email", form_language:"Preferred Language", form_business:"Business Name / Company", form_budget:"Estimated Budget", form_service:"What do you need?", form_message:"Tell me about your project",
+        form_landing:"Landing Page", form_redesign:"Website Redesign", form_branding_site:"Branding + Website", form_webapp:"Web App / Custom Solution", form_submit:"Send Project Request →"
+      },
+      es: {
+        nav_home:"Inicio", nav_services:"Servicios", nav_portfolio:"Portafolio", nav_about:"Sobre", nav_contact:"Contacto", nav_cta:"Hablemos ↗",
+        hero_eyebrow:"デジタルの力で、アイデアを現実に。",
+        hero_title:'Convertimos ideas en <span class="text-rinko-red2">experiencias</span> digitales memorables.',
+        hero_text:"Soluciones digitales completas que combinan diseño, tecnología y estrategia para impulsar marcas y generar resultados reales.",
+        hero_cta:"Iniciar proyecto →", hero_portfolio:"Ver portafolio",
+        services_kicker:"Nuestros servicios", services_title:"Soluciones que impulsan tu negocio",
+        service_web:"Diseño Web", service_dev:"Desarrollo", service_brand:"Branding", service_seo:"SEO & GEO", service_ai:"Automatización con IA", service_strategy:"Estrategia Digital",
+        service_web_text:"Sitios modernos, responsivos y enfocados en conversión.",
+        service_dev_text:"Soluciones web robustas, rápidas y escalables.",
+        service_brand_text:"Marcas fuertes, memorables y alineadas con propósito.",
+        service_seo_text:"Haz que te encuentren en Google y búsquedas con IA.",
+        service_ai_text:"Automatiza procesos y aumenta tu eficiencia.",
+        service_strategy_text:"Planificación estratégica enfocada en resultados.",
+        portfolio_kicker:"Portafolio", portfolio_title:"Proyectos que generan resultados reales.", portfolio_text:"Cada proyecto es único. Cada detalle está pensado para crear experiencias que conectan, atraen y convierten.", project_unicare_category:"Servicio de Limpieza", project_unicare_desc:"Sitio web premium para servicio local de limpieza enfocado en confianza, presentación de servicios y captación de clientes.", project_delivery_category:"Entrega Local", project_delivery_desc:"Landing page para empresa de entregas locales enfocada en credibilidad, flujo de contacto y conversiones.", project_yas_category:"Plataforma Literaria", project_yas_desc:"Proyecto de sitio web institucional para una plataforma literaria enfocada en producción editorial, eventos y conexiones creativas.", project_uniparental_category:"Proyecto Institucional", project_uniparental_desc:"Sitio web institucional para una plataforma de apoyo familiar con identidad visual cinematográfica y experiencia acogedora.", visit_website:"Visitar sitio →", coming_soon:"Próximamente", 
+        process_kicker:"Nuestro proceso", process_title:"Del concepto al lanzamiento.",
+        step1_title:"Descubrir", step1_text:"Entendemos tu negocio, objetivos y público.",
+        step2_title:"Planear", step2_text:"Estrategia, estructura y diseño alineados con tu objetivo.",
+        step3_title:"Desarrollar", step3_text:"Convertimos el plan en un sitio rápido, seguro y moderno.",
+        step4_title:"Lanzar", step4_text:"Probamos todo y publicamos tu proyecto con excelencia.",
+        step5_title:"Crecer", step5_text:"Acompañamos, optimizamos e impulsamos tus resultados.",
+        contact_kicker:"¿Hablamos?", contact_title:"¿Listo para hacer realidad tu idea?", contact_text:"Completa el formulario y nos pondremos en contacto pronto para entender tu proyecto.",
+        form_name:"Nombre", form_email:"Email", form_language:"Idioma preferido", form_business:"Nombre de empresa", form_budget:"Presupuesto estimado", form_service:"¿Qué necesitas?", form_message:"Cuéntame sobre tu proyecto",
+        form_landing:"Landing Page", form_redesign:"Rediseño de website", form_branding_site:"Branding + Website", form_webapp:"Web App / Solución personalizada", form_submit:"Enviar solicitud →"
+      }
+    };
+
+    function setLanguage(lang){
+      const dictionary = translations[lang] || translations.pt;
+      document.documentElement.lang = lang === "pt" ? "pt-BR" : lang;
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.dataset.i18n;
+        if(dictionary[key]) el.textContent = dictionary[key];
+      });
+
+      document.querySelectorAll("[data-i18n-html]").forEach(el => {
+        const key = el.dataset.i18nHtml;
+        if(dictionary[key]) el.innerHTML = dictionary[key];
+      });
+
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.dataset.i18nPlaceholder;
+        if(dictionary[key]) el.placeholder = dictionary[key];
+      });
+
+      document.querySelectorAll("[data-lang-btn]").forEach(btn => {
+        const active = btn.dataset.langBtn === lang;
+        btn.classList.toggle("border-rinko-red/60", active);
+        btn.classList.toggle("text-rinko-red2", active);
+        btn.classList.toggle("border-white/15", !active);
+        btn.classList.toggle("text-white/80", !active);
+      });
+
+      const formLanguage = document.querySelector('select[name="language"]');
+      if(formLanguage) formLanguage.value = lang === "pt" ? "PT" : lang.toUpperCase();
+
+      localStorage.setItem("rinkoLanguage", lang);
+    }
+
+    document.querySelectorAll("[data-lang-btn]").forEach(btn => {
+      btn.addEventListener("click", () => setLanguage(btn.dataset.langBtn));
+    });
+
+    const savedLanguage = localStorage.getItem("rinkoLanguage");
+    const browserLanguage = navigator.language?.slice(0,2).toLowerCase();
+    const initialLanguage = savedLanguage || (["pt","en","es"].includes(browserLanguage) ? browserLanguage : "en");
+    setLanguage(initialLanguage);
+
+    const menu = document.getElementById("menu");
+    const nav = document.getElementById("nav");
+
+    menu?.addEventListener("click", () => {
+      nav.classList.toggle("max-md:hidden");
+      nav.classList.toggle("max-md:block");
+    });
+
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.add("max-md:hidden");
+        nav.classList.remove("max-md:block");
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+  <script>
+    const portfolioGrid = document.getElementById("portfolio-grid");
+    let cmsProjects = [];
+
+    const repoCandidates = [
+      "content/portfolio",
+      "Site V2/content/portfolio",
+      "site v2/content/portfolio",
+      "site v2/site v2/content/portfolio"
+    ];
+
+    function githubApiUrl(path) {
+      return "https://api.github.com/repos/RinkoDigital/rinkodigital-site-V2/contents/" +
+        path.split("/").map(encodeURIComponent).join("/") +
+        "?ref=main";
+    }
+
+    async function fetchPortfolioFiles() {
+      for (const path of repoCandidates) {
+        try {
+          const response = await fetch(githubApiUrl(path), { cache: "no-store" });
+          if (!response.ok) continue;
+
+          const files = await response.json();
+          if (!Array.isArray(files)) continue;
+
+          const ymlFiles = files.filter(file => file.type === "file" && /\.(yml|yaml)$/i.test(file.name));
+          if (!ymlFiles.length) continue;
+
+          const projects = await Promise.all(
+            ymlFiles.map(async file => {
+              const fileResponse = await fetch(file.download_url, { cache: "no-store" });
+              const text = await fileResponse.text();
+              const data = jsyaml.load(text);
+              return data;
+            })
+          );
+
+          return projects;
+        } catch (error) {
+          console.warn("Portfolio CMS path failed:", path, error);
+        }
+      }
+
+      return [];
+    }
+
+    function normalizePath(path) {
+      if (!path) return "";
+      if (/^https?:\/\//i.test(path)) return path;
+      return path.startsWith("/") ? path : "/" + path;
+    }
+
+    function currentLang() {
+      const saved = localStorage.getItem("rinkoLanguage");
+      if (["pt", "en", "es"].includes(saved)) return saved;
+      const browser = navigator.language?.slice(0, 2).toLowerCase();
+      return ["pt", "en", "es"].includes(browser) ? browser : "en";
+    }
+
+    function t(project, field, lang) {
+      return project[`${field}_${lang}`] || project[`${field}_pt`] || project[field] || "";
+    }
+
+    function buttonHtml(project, lang) {
+      if (project.status === "live" && project.url) {
+        const label = lang === "pt" ? "Visitar site →" : lang === "es" ? "Visitar sitio →" : "Visit website →";
+        return `<a class="text-rinko-red2 text-xs font-black uppercase tracking-[.1em] border-b border-rinko-red" href="${project.url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+      }
+
+      const label = lang === "pt" ? "Em breve" : lang === "es" ? "Próximamente" : "Coming soon";
+      return `<span class="inline-block text-rinko-muted text-xs font-black uppercase tracking-[.1em] border-b border-white/20 cursor-not-allowed">${label}</span>`;
+    }
+
+    function renderPortfolio() {
+      const lang = currentLang();
+
+      const projects = cmsProjects
+        .filter(project => project && project.published !== false)
+        .sort((a, b) => Number(a.order || 999) - Number(b.order || 999));
+
+      if (!projects.length) {
+        portfolioGrid.innerHTML = `
+          <div class="col-span-2 max-md:col-span-1 border border-white/10 bg-black/70 backdrop-blur-[2px] p-8 text-rinko-muted">
+            Nenhum projeto encontrado no CMS ainda.
+          </div>
+        `;
+        return;
+      }
+
+      portfolioGrid.innerHTML = projects.map(project => {
+        const title = project.title || "Projeto";
+        const category = t(project, "category", lang);
+        const description = t(project, "description", lang);
+        const image = normalizePath(project.image);
+
+        return `
+          <article class="group border border-white/10 bg-black/70 backdrop-blur-[2px] shadow-[0_20px_55px_rgba(0,0,0,.45)] hover:border-rinko-red/60 transition overflow-hidden">
+            <div class="relative h-[260px] overflow-hidden border-b border-white/10 bg-black">
+              ${image ? `<img src="${image}" alt="${title} website preview" class="w-full h-full object-cover object-center transition duration-500 group-hover:scale-105">` : ""}
+            </div>
+            <div class="p-6">
+              <div class="text-rinko-red2 uppercase tracking-[.14em] text-[11px] font-black mb-2">${category}</div>
+              <h3 class="text-xl font-black mb-3">${title}</h3>
+              <p class="text-rinko-muted text-sm leading-relaxed mb-5">${description}</p>
+              ${buttonHtml(project, lang)}
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    async function loadPortfolioFromCMS() {
+      try {
+        cmsProjects = await fetchPortfolioFiles();
+        renderPortfolio();
+      } catch (error) {
+        console.error("Erro ao carregar portfólio do CMS:", error);
+        portfolioGrid.innerHTML = `
+          <div class="col-span-2 max-md:col-span-1 border border-white/10 bg-black/70 backdrop-blur-[2px] p-8 text-rinko-muted">
+            Não foi possível carregar os projetos do CMS.
+          </div>
+        `;
+      }
+    }
+
+    document.querySelectorAll("[data-lang-btn]").forEach(button => {
+      button.addEventListener("click", () => {
+        setTimeout(renderPortfolio, 50);
+      });
+    });
+
+    loadPortfolioFromCMS();
+  </script>
+
+</body>
+</html>

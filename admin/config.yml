@@ -1,0 +1,100 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: false
+
+media_folder: "static/uploads"
+public_folder: "/static/uploads"
+
+site_url: "https://rinkodigital.com"
+display_url: "https://rinkodigital.com"
+logo_url: "/assets/rinko-logo.png"
+
+locale: "pt"
+
+collections:
+  - name: "settings"
+    label: "Configurações do site"
+    files:
+      - name: "home"
+        label: "Página inicial"
+        file: "content/home.yml"
+        fields:
+          - { label: "Título SEO", name: "seo_title", widget: "string" }
+          - { label: "Descrição SEO", name: "seo_description", widget: "text" }
+          - { label: "Texto japonês do Hero", name: "hero_eyebrow", widget: "string" }
+          - { label: "Título Hero PT", name: "hero_title_pt", widget: "string" }
+          - { label: "Título Hero EN", name: "hero_title_en", widget: "string" }
+          - { label: "Título Hero ES", name: "hero_title_es", widget: "string" }
+          - { label: "Texto Hero PT", name: "hero_text_pt", widget: "text" }
+          - { label: "Texto Hero EN", name: "hero_text_en", widget: "text" }
+          - { label: "Texto Hero ES", name: "hero_text_es", widget: "text" }
+          - { label: "Imagem de fundo Hero", name: "hero_background", widget: "image", required: false }
+          - { label: "Email de contato", name: "contact_email", widget: "string" }
+          - { label: "Localização", name: "location", widget: "string" }
+
+      - name: "services"
+        label: "Serviços"
+        file: "content/services.yml"
+        fields:
+          - label: "Lista de serviços"
+            name: "services"
+            widget: "list"
+            summary: "{{fields.title_pt}}"
+            fields:
+              - { label: "Ícone", name: "icon", widget: "string", required: false }
+              - { label: "Título PT", name: "title_pt", widget: "string" }
+              - { label: "Título EN", name: "title_en", widget: "string" }
+              - { label: "Título ES", name: "title_es", widget: "string" }
+              - { label: "Descrição PT", name: "description_pt", widget: "text" }
+              - { label: "Descrição EN", name: "description_en", widget: "text" }
+              - { label: "Descrição ES", name: "description_es", widget: "text" }
+
+      - name: "faq"
+        label: "FAQ"
+        file: "content/faq.yml"
+        fields:
+          - label: "Perguntas frequentes"
+            name: "faq"
+            widget: "list"
+            summary: "{{fields.question_pt}}"
+            fields:
+              - { label: "Pergunta PT", name: "question_pt", widget: "string" }
+              - { label: "Resposta PT", name: "answer_pt", widget: "text" }
+              - { label: "Pergunta EN", name: "question_en", widget: "string" }
+              - { label: "Resposta EN", name: "answer_en", widget: "text" }
+              - { label: "Pergunta ES", name: "question_es", widget: "string" }
+              - { label: "Resposta ES", name: "answer_es", widget: "text" }
+
+      - name: "payment"
+        label: "Pagamentos Stripe"
+        file: "content/payment.yml"
+        fields:
+          - { label: "Link depósito Stripe", name: "stripe_deposit_url", widget: "string", required: false }
+          - { label: "Link Essential Stripe", name: "stripe_essential_url", widget: "string", required: false }
+          - { label: "Link Professional Stripe", name: "stripe_professional_url", widget: "string", required: false }
+          - { label: "Link Custom Payment Stripe", name: "stripe_custom_url", widget: "string", required: false }
+
+  - name: "portfolio"
+    label: "Portfólio"
+    folder: "content/portfolio"
+    create: true
+    slug: "{{slug}}"
+    extension: "yml"
+    format: "yml"
+    summary: "{{title}}"
+    fields:
+      - { label: "Nome do projeto", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Ordem", name: "order", widget: "number", value_type: "int", default: 1 }
+      - { label: "Publicado", name: "published", widget: "boolean", default: true }
+      - { label: "Categoria PT", name: "category_pt", widget: "string" }
+      - { label: "Categoria EN", name: "category_en", widget: "string" }
+      - { label: "Categoria ES", name: "category_es", widget: "string" }
+      - { label: "Descrição PT", name: "description_pt", widget: "text" }
+      - { label: "Descrição EN", name: "description_en", widget: "text" }
+      - { label: "Descrição ES", name: "description_es", widget: "text" }
+      - { label: "Imagem preview", name: "image", widget: "image" }
+      - { label: "URL do site", name: "url", widget: "string", required: false }
+      - { label: "Status", name: "status", widget: "select", options: ["live", "coming_soon"], default: "live" }

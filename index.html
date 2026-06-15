@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Rinko Digital | Premium Websites & Digital Experiences</title>
+  <meta name="description" content="Rinko Digital creates premium websites, branding, SEO-ready pages, AI automations, and digital experiences for businesses that want to grow online." />
+  <link rel="canonical" href="https://rinkodigital.com/" />
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180x180.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#b30000">
+
+
+  <meta property="og:title" content="Rinko Digital | Premium Websites & Digital Experiences" />
+  <meta property="og:description" content="Premium websites, branding, SEO, AI automation, and digital strategy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rinkodigital.com/" />
+  <meta property="og:image" content="https://rinkodigital.com/assets/rinko-hero-bg.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Rinko Digital" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rinko Digital | Premium Websites & Digital Experiences" />
+  <meta name="twitter:description" content="Premium websites, branding, SEO, AI automation, and digital strategy." />
+  <meta name="twitter:image" content="https://rinkodigital.com/assets/rinko-hero-bg.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "Arial", "sans-serif"],
+            serif: ["Cormorant Garamond", "Georgia", "serif"]
+          },
+          colors: {
+            rinko: {
+              black: "#020202",
+              panel: "#080606",
+              red: "#e3261d",
+              red2: "#ff3b32",
+              white: "#f7f1eb",
+              muted: "#bdb4ad"
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body{background:#020202}
+    .hero-bg{
+      background:
+        linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.80) 33%,rgba(0,0,0,.12) 60%,rgba(0,0,0,.28) 100%),
+        linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.16) 60%,rgba(0,0,0,.72) 100%),
+        url("assets/rinko-hero-bg.png") center top / cover no-repeat;
+    }
+
+    .dark-section{
+      background:
+        linear-gradient(180deg,rgba(0,0,0,.86),rgba(0,0,0,.92)),
+        radial-gradient(circle at 14% 22%,rgba(227,38,29,.10),transparent 26%),
+        radial-gradient(circle at 88% 80%,rgba(227,38,29,.12),transparent 24%),
+        url("assets/rinko-hero-bg.png") center top / cover no-repeat fixed;
+    }
+
+    .wave-bg{
+      background:
+        linear-gradient(180deg,rgba(0,0,0,.84),rgba(0,0,0,.91)),
+        repeating-radial-gradient(ellipse at 50% 100%,rgba(227,38,29,.10) 0 1px,transparent 1px 26px),
+        url("assets/rinko-hero-bg.png") center top / cover no-repeat fixed;
+    }
+
+    .field{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(0,0,0,.38);
+      color:#fff;
+      min-height:48px;
+      padding:0 16px;
+      outline:none;
+      font-size:13px;
+      border-radius:0;
+    }
+    .field:focus{
+      border-color:rgba(227,38,29,.82);
+      box-shadow:0 0 0 3px rgba(227,38,29,.12);
+    }
+    textarea.field{
+      padding:16px;
+      min-height:126px;
+    }
+    select option{
+      background:#080303;
+      color:#fff;
+    }
+
+    .petal{
+      position:absolute;
+      width:9px;
+      height:6px;
+      border-radius:80% 20% 80% 20%;
+      background:linear-gradient(135deg,#ff6b62,#8b0907);
+      opacity:.48;
+      filter:drop-shadow(0 0 8px rgba(227,38,29,.45));
+      animation:fall linear infinite;
+    }
+    .petal:nth-child(1){left:12%;top:-8%;animation-duration:16s;animation-delay:-3s}
+    .petal:nth-child(2){left:28%;top:-8%;animation-duration:21s;animation-delay:-9s}
+    .petal:nth-child(3){left:45%;top:-8%;animation-duration:15s;animation-delay:-6s}
+    .petal:nth-child(4){left:64%;top:-8%;animation-duration:19s;animation-delay:-12s}
+    .petal:nth-child(5){left:80%;top:-8%;animation-duration:17s;animation-delay:-4s}
+    .petal:nth-child(6){left:92%;top:-8%;animation-duration:22s;animation-delay:-13s}
+    @keyframes fall{
+      0%{transform:translate3d(0,-10vh,0) rotate(0deg)}
+      50%{transform:translate3d(-70px,54vh,0) rotate(220deg)}
+      100%{transform:translate3d(70px,110vh,0) rotate(480deg)}
+    }
+    @media(max-width:768px){
+      .dark-section,.wave-bg{
+        background-attachment:scroll;
+        background-position:center top;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Rinko Digital",
+    "url": "https://rinkodigital.com/",
+    "logo": "https://rinkodigital.com/assets/rinko-logo.png",
+    "image": "https://rinkodigital.com/assets/rinko-hero-bg.png",
+    "description": "Rinko Digital cria sites premium, branding, páginas otimizadas para SEO, automações com IA e experiências digitais para negócios que querem crescer online.",
+    "email": "contact@rinkodigital.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Washington",
+      "addressCountry": "US"
+    },
+    "areaServed": "Worldwide",
+    "knowsLanguage": ["pt-BR", "en", "es"],
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Web Design" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Desenvolvimento Web" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Branding" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "SEO & GEO" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Automação com IA" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Estratégia Digital" }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quanto custa um site com a Rinko Digital?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Os valores variam conforme o escopo do projeto, geralmente entre $150 e $1.500+. No formulário de contato você escolhe a faixa de orçamento e enviamos uma proposta personalizada." }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto tempo leva para o site ficar pronto?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Projetos simples (landing pages) costumam levar de 1 a 2 semanas. Sites institucionais ou com mais páginas levam de 3 a 6 semanas, dependendo do escopo e da entrega de conteúdo pelo cliente." }
+      },
+      {
+        "@type": "Question",
+        "name": "Vocês fazem otimização para SEO e buscas com IA (GEO)?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim. Todos os projetos incluem estrutura otimizada para SEO tradicional (Google) e GEO (ChatGPT, Perplexity, Google AI Overviews), com dados estruturados, performance e conteúdo pensado para ser encontrado." }
+      },
+      {
+        "@type": "Question",
+        "name": "O site terá suporte depois do lançamento?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim. Oferecemos suporte pós-lançamento para ajustes, atualizações de conteúdo e correções. Planos de manutenção contínua também estão disponíveis." }
+      },
+      {
+        "@type": "Question",
+        "name": "Vocês atendem clientes fora do Brasil?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim. Atendemos clientes em português, inglês e espanhol, com sede nos Estados Unidos e atuação remota para qualquer parte do mundo." }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona o processo de pagamento?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Trabalhamos normalmente com um sinal para iniciar o projeto e o restante na entrega. As condições são combinadas durante a proposta, conforme o escopo do projeto." }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-rinko-black text-rinko-white font-sans overflow-x-hidden">
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-10" aria-hidden="true">
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span>
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span>
+  </div>
+
+  <header class="absolute top-0 left-0 right-0 z-50">
+    <div class="max-w-[1536px] mx-auto px-12 max-lg:px-7 max-sm:px-5 h-[92px] flex items-center justify-between gap-8">
+      <a href="#home" class="shrink-0 flex items-center gap-4">
+        <img src="assets/rinko-logo.png" alt="Rinko Digital logo" class="w-[250px] max-sm:w-[180px] drop-shadow-[0_8px_22px_rgba(227,38,29,.35)]">
+      </a>
+
+      <button id="menu" class="hidden max-md:block text-3xl text-white">☰</button>
+
+      <nav id="nav" class="max-md:hidden max-md:absolute max-md:top-[92px] max-md:left-0 max-md:right-0 max-md:bg-black/95 max-md:p-7">
+        <ul class="flex max-md:grid items-center gap-10 max-lg:gap-6 uppercase text-[13px] font-extrabold tracking-[.05em]">
+          <li><a data-i18n="nav_home" class="text-rinko-red2 border-b-2 border-rinko-red pb-3" href="#home">Início</a></li>
+          <li><a data-i18n="nav_services" class="hover:text-rinko-red2" href="#services">Serviços</a></li>
+          <li><a data-i18n="nav_portfolio" class="hover:text-rinko-red2" href="portfolio.html">Portfólio</a></li>
+          <li><a data-i18n="nav_about" class="hover:text-rinko-red2" href="#process">Sobre</a></li>
+          <li><a data-i18n="nav_faq" class="hover:text-rinko-red2" href="#faq">FAQ</a></li>
+          <li><a data-i18n="nav_contact" class="hover:text-rinko-red2" href="#contact">Contato</a></li>
+        </ul>
+
+        <div class="hidden max-md:flex gap-2 mt-6">
+          <button type="button" data-lang-btn="pt" class="lang-btn border border-rinko-red/60 text-rinko-red2 px-3 py-2 text-xs font-black">PT</button>
+          <button type="button" data-lang-btn="en" class="lang-btn border border-white/15 text-white/80 px-3 py-2 text-xs font-black">EN</button>
+          <button type="button" data-lang-btn="es" class="lang-btn border border-white/15 text-white/80 px-3 py-2 text-xs font-black">ES</button>
+        </div>
+      </nav>
+
+      <div class="flex items-center gap-3 max-md:hidden">
+        <button type="button" data-lang-btn="pt" class="lang-btn border border-rinko-red/60 text-rinko-red2 px-3 py-2 text-xs font-black">PT</button>
+        <button type="button" data-lang-btn="en" class="lang-btn border border-white/15 text-white/80 px-3 py-2 text-xs font-black">EN</button>
+        <button type="button" data-lang-btn="es" class="lang-btn border border-white/15 text-white/80 px-3 py-2 text-xs font-black">ES</button>
+      </div>
+
+      <a data-i18n="nav_cta" href="#contact" class="max-lg:hidden uppercase text-[13px] font-black tracking-[.08em] border border-rinko-red/70 text-rinko-red2 rounded-xl px-7 h-[52px] inline-flex items-center justify-center hover:bg-rinko-red hover:text-white transition">Fale conosco ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero-bg relative min-h-[920px] max-lg:min-h-[780px] max-sm:min-h-[700px] flex items-center border-b border-rinko-red/25">
+      <div class="max-w-[1536px] mx-auto px-12 max-lg:px-7 max-sm:px-5 w-full pt-[92px]">
+        <div class="max-w-[590px]">
+          <div data-i18n="hero_eyebrow" class="text-rinko-red2 tracking-[.24em] font-extrabold text-[15px] mb-5">デジタルの力で、アイデアを現実に。</div>
+
+          <h1 class="font-serif text-[clamp(54px,5.8vw,92px)] leading-[.94] tracking-[-.045em] font-bold mb-7">
+            <span data-i18n-html="hero_title">Transformamos ideias em <span class="text-rinko-red2">experiências</span> digitais memoráveis.</span>
+          </h1>
+
+          <div class="w-14 h-[2px] bg-rinko-red shadow-[0_0_20px_rgba(227,38,29,.8)] mb-7"></div>
+
+          <p data-i18n="hero_text" class="text-rinko-muted text-[19px] leading-[1.65] max-w-[520px] mb-9">
+            Soluções digitais completas que combinam design, tecnologia e estratégia para impulsionar marcas e gerar resultados reais.
+          </p>
+
+          <div class="flex items-center gap-8 flex-wrap">
+            <a href="#contact" class="inline-flex items-center justify-center h-[58px] px-9 rounded-xl bg-gradient-to-br from-[#d91f17] to-rinko-red2 uppercase font-black tracking-[.08em] text-sm shadow-[0_24px_60px_rgba(227,38,29,.28)]">
+              <span data-i18n="hero_cta">Começar projeto →</span>
+            </a>
+
+            <a href="portfolio.html" class="inline-flex items-center gap-4 text-rinko-red2 uppercase tracking-[.1em] font-black text-sm">
+              <span class="w-12 h-12 rounded-full border border-rinko-red2 grid place-items-center">▶</span>
+              <span data-i18n="hero_portfolio">Ver portfólio</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="dark-section border-b border-rinko-red/25">
+      <div class="max-w-[1536px] mx-auto px-12 max-lg:px-7 max-sm:px-5 py-20 max-md:py-14">
+        <div class="text-center mb-8">
+          <div data-i18n="services_kicker" class="text-rinko-red2 uppercase tracking-[.16em] font-black text-xs mb-3">Nossos serviços</div>
+          <h2 data-i18n="services_title" class="font-serif text-[clamp(34px,3.4vw,54px)] leading-none tracking-[-.03em]">Soluções que impulsionam o seu negócio</h2>
+          <div class="w-12 h-[2px] bg-rinko-red mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-6 max-xl:grid-cols-3 max-md:grid-cols-1 gap-3">
+          <article class="border border-white/10 bg-black/70 backdrop-blur-[2px] min-h-[205px] p-7 text-center shadow-[0_20px_55px_rgba(0,0,0,.45)] hover:border-rinko-red/50 transition">
+            <div class="text-rinko-red2 text-5xl h-14 grid place-items-center mb-4">鳥</div>
+            <h3 data-i18n="service_web" class="uppercase tracking-[.08em] font-black text-sm mb-2">Web Design</h3>
+            <p data-i18n="service_web_text" class="text-rinko-muted text-xs leading-relaxed">Sites modernos, responsivos e focados em conversão.</p>
+            <div class="w-8 h-[2px] bg-rinko-red mx-auto mt-4"></div>
+          </article>
+
+          <article class="border border-white/10 bg-black/70 backdrop-blur-[2px] min-h-[205px] p-7 text-center shadow-[0_20px_55px_rgba(0,0,0,.45)] hover:border-rinko-red/50 transition">
+            <div class="text-rinko-red2 text-4xl h-14 grid place-items-center mb-4">&lt;/&gt;</div>
+            <h3 data-i18n="service_dev" class="uppercase tracking-[.08em] font-black text-sm mb-2">Desenvolvimento</h3>
+            <p data-i18n="service_dev_text" class="text-rinko-muted text-xs leading-relaxed">Soluções web robustas, rápidas e escaláveis.</p>
+            <div class="w-8 h-[2px] bg-rinko-red mx-auto mt-4"></div>
+          </article>
+
+          <article class="border border-white/10 bg-black/70 backdrop-blur-[2px] min-h-[205px] p-7 text-center shadow-[0_20px_55px_rgba(0,0,0,.45)] hover:border-rinko-red/50 transition">
+            <div class="text-rinko-red2 text-5xl h-14 grid place-items-center mb-4">円</div>
+            <h3 data-i18n="service_brand" class="uppercase tracking-[.08em] font-black text-sm mb-2">Branding</h3>
+            <p data-i18n="service_brand_text" class="text-rinko-muted text-xs leading-relaxed">Marcas fortes, memoráveis e alinhadas com propósito.</p>
+            <div class="w-8 h-[2px] bg-rinko-red mx-auto mt-4"></div>
+          </article>
+
+          <article class="border border-white/10 bg-black/70 backdrop-blur-[2px] min-h-[205px] p-7 text-center shadow-[0_20px_55px_rgba(0,0,0,.45)] hover:border-rinko-red/50 transition">
+            <div class="text-rinko-red2 text-5xl h-14 grid place-items-center mb-4">⌕</div>
+            <h3 data-i18n="service_seo" class="uppercase tracking-[.08em] font-black text-sm mb-2">SEO & GEO</h3>
+            <p data-i18n="service_seo_text" class="text-rinko-muted text-xs leading-relaxed">Seja encontrado no Google e em buscas com IA.</p>
+            <div class="w-8 h-[2px] bg-rinko-red mx-auto mt-4"></div>
+          </article>
+
+          <article class="border border-white/10 bg-black/70 backdrop-blur-[2px] min-h-[205px] p-7 text-center shadow-[0_20px_55px_rgba(0,0,0,.45)] hover:border-rinko-red/50 transition">
+            <div class="text-rinko-red2 text-5xl h-14 grid place-items-center mb-4">◌</div>
+            <h3 data-i18n="service_ai" class="uppercase tracking-[.08em] font-black text-sm mb-2">Automação com IA</h3>
+            <p data-i18n="service_ai_text" class="text-rinko-muted text-xs leading-relaxed">Automatize processos e aumente sua eficiência.</p>
+            <div class="w-8 h-[2px] bg-rinko-red mx-auto mt-4"></div>
+          </article>
+
+          <article class="border border-white/10 bg-black/70 backdrop-blur-[2px] min-h-[205px] p-7 text-center shadow-[0_20px_55px_rgba(0,0,0,.45)] hover:border-rinko-red/50 transition">
+            <div class="text-rinko-red2 text-5xl h-14 grid place-items-center mb-4">↗</div>
+            <h3 data-i18n="service_strategy" class="uppercase tracking-[.08em] font-black text-sm mb-2">Estratégia Digital</h3>
+            <p data-i18n="service_strategy_text" class="text-rinko-muted text-xs leading-relaxed">Planejamento estratégico focado em resultados.</p>
+            <div class="w-8 h-[2px] bg-rinko-red mx-auto mt-4"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="dark-section py-24 max-md:py-16 border-b border-rinko-red/20">
+      <div class="max-w-[1536px] mx-auto px-12 max-lg:px-7 max-sm:px-5">
+        <div class="text-center mb-10">
+          <div data-i18n="process_kicker" class="text-rinko-red2 uppercase tracking-[.16em] font-black text-xs mb-3">Nosso processo</div>
+          <h2 data-i18n="process_title" class="font-serif text-[clamp(34px,3.2vw,56px)] leading-none tracking-[-.035em]">Do conceito ao lançamento.</h2>
+          <div class="w-12 h-[2px] bg-rinko-red mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-5 max-lg:grid-cols-3 max-sm:grid-cols-1 gap-8">
+          <div class="text-center border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.35)]">
+            <div class="w-[78px] h-[78px] mx-auto mb-3 rounded-full border border-rinko-red/55 bg-black/55 grid place-items-center text-3xl">⌕</div>
+            <small class="text-rinko-red2 font-black">01</small>
+            <h3 data-i18n="step1_title" class="uppercase font-black tracking-[.08em] text-sm mt-2">Descobrir</h3>
+            <p data-i18n="step1_text" class="text-rinko-muted text-xs leading-relaxed max-w-[190px] mx-auto mt-2">Entendemos seu negócio, objetivos e público.</p>
+          </div>
+
+          <div class="text-center border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.35)]">
+            <div class="w-[78px] h-[78px] mx-auto mb-3 rounded-full border border-rinko-red/55 bg-black/55 grid place-items-center text-3xl">✎</div>
+            <small class="text-rinko-red2 font-black">02</small>
+            <h3 data-i18n="step2_title" class="uppercase font-black tracking-[.08em] text-sm mt-2">Planejar</h3>
+            <p data-i18n="step2_text" class="text-rinko-muted text-xs leading-relaxed max-w-[190px] mx-auto mt-2">Estratégia, estrutura e design alinhados ao seu objetivo.</p>
+          </div>
+
+          <div class="text-center border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.35)]">
+            <div class="w-[78px] h-[78px] mx-auto mb-3 rounded-full border border-rinko-red/55 bg-black/55 grid place-items-center text-2xl">&lt;/&gt;</div>
+            <small class="text-rinko-red2 font-black">03</small>
+            <h3 data-i18n="step3_title" class="uppercase font-black tracking-[.08em] text-sm mt-2">Desenvolver</h3>
+            <p data-i18n="step3_text" class="text-rinko-muted text-xs leading-relaxed max-w-[190px] mx-auto mt-2">Transformamos o plano em um site rápido, seguro e moderno.</p>
+          </div>
+
+          <div class="text-center border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.35)]">
+            <div class="w-[78px] h-[78px] mx-auto mb-3 rounded-full border border-rinko-red/55 bg-black/55 grid place-items-center text-3xl">↗</div>
+            <small class="text-rinko-red2 font-black">04</small>
+            <h3 data-i18n="step4_title" class="uppercase font-black tracking-[.08em] text-sm mt-2">Lançar</h3>
+            <p data-i18n="step4_text" class="text-rinko-muted text-xs leading-relaxed max-w-[190px] mx-auto mt-2">Testamos tudo e colocamos seu projeto no ar com excelência.</p>
+          </div>
+
+          <div class="text-center border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.35)]">
+            <div class="w-[78px] h-[78px] mx-auto mb-3 rounded-full border border-rinko-red/55 bg-black/55 grid place-items-center text-3xl">↟</div>
+            <small class="text-rinko-red2 font-black">05</small>
+            <h3 data-i18n="step5_title" class="uppercase font-black tracking-[.08em] text-sm mt-2">Crescer</h3>
+            <p data-i18n="step5_text" class="text-rinko-muted text-xs leading-relaxed max-w-[190px] mx-auto mt-2">Acompanhamos, otimizamos e impulsionamos seus resultados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="dark-section py-24 max-md:py-16 border-b border-rinko-red/20">
+      <div class="max-w-[1536px] mx-auto px-12 max-lg:px-7 max-sm:px-5">
+        <div class="text-center mb-12">
+          <div data-i18n="faq_kicker" class="text-rinko-red2 uppercase tracking-[.16em] font-black text-xs mb-3">Perguntas frequentes</div>
+          <h2 data-i18n="faq_title" class="font-serif text-[clamp(34px,3.2vw,54px)] leading-none tracking-[-.03em]">Tire suas dúvidas antes de começar</h2>
+          <div class="w-12 h-[2px] bg-rinko-red mx-auto mt-4"></div>
+        </div>
+
+        <div class="max-w-[860px] mx-auto grid gap-3">
+          <details class="group border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.35)]">
+            <summary data-i18n="faq_q1" class="cursor-pointer list-none flex items-center justify-between gap-4 font-black text-sm uppercase tracking-[.04em]">
+              Quanto custa um site com a Rinko Digital?
+              <span class="text-rinko-red2 text-xl shrink-0 transition group-open:rotate-45">+</span>
+            </summary>
+            <p data-i18n="faq_a1" class="text-rinko-muted text-sm leading-relaxed mt-4">Os valores variam conforme o escopo do projeto, geralmente entre $150 e $1.500+. No formulário de contato você escolhe a faixa de orçamento e enviamos uma proposta personalizada.</p>
+          </details>
+
+          <details class="group border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.35)]">
+            <summary data-i18n="faq_q2" class="cursor-pointer list-none flex items-center justify-between gap-4 font-black text-sm uppercase tracking-[.04em]">
+              Quanto tempo leva para o site ficar pronto?
+              <span class="text-rinko-red2 text-xl shrink-0 transition group-open:rotate-45">+</span>
+            </summary>
+            <p data-i18n="faq_a2" class="text-rinko-muted text-sm leading-relaxed mt-4">Projetos simples (landing pages) costumam levar de 1 a 2 semanas. Sites institucionais ou com mais páginas levam de 3 a 6 semanas, dependendo do escopo e da entrega de conteúdo pelo cliente.</p>
+          </details>
+
+          <details class="group border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.35)]">
+            <summary data-i18n="faq_q3" class="cursor-pointer list-none flex items-center justify-between gap-4 font-black text-sm uppercase tracking-[.04em]">
+              Vocês fazem otimização para SEO e buscas com IA (GEO)?
+              <span class="text-rinko-red2 text-xl shrink-0 transition group-open:rotate-45">+</span>
+            </summary>
+            <p data-i18n="faq_a3" class="text-rinko-muted text-sm leading-relaxed mt-4">Sim. Todos os projetos incluem estrutura otimizada para SEO tradicional (Google) e GEO (ChatGPT, Perplexity, Google AI Overviews), com dados estruturados, performance e conteúdo pensado para ser encontrado.</p>
+          </details>
+
+          <details class="group border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.35)]">
+            <summary data-i18n="faq_q4" class="cursor-pointer list-none flex items-center justify-between gap-4 font-black text-sm uppercase tracking-[.04em]">
+              O site terá suporte depois do lançamento?
+              <span class="text-rinko-red2 text-xl shrink-0 transition group-open:rotate-45">+</span>
+            </summary>
+            <p data-i18n="faq_a4" class="text-rinko-muted text-sm leading-relaxed mt-4">Sim. Oferecemos suporte pós-lançamento para ajustes, atualizações de conteúdo e correções. Planos de manutenção contínua também estão disponíveis.</p>
+          </details>
+
+          <details class="group border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.35)]">
+            <summary data-i18n="faq_q5" class="cursor-pointer list-none flex items-center justify-between gap-4 font-black text-sm uppercase tracking-[.04em]">
+              Vocês atendem clientes fora do Brasil?
+              <span class="text-rinko-red2 text-xl shrink-0 transition group-open:rotate-45">+</span>
+            </summary>
+            <p data-i18n="faq_a5" class="text-rinko-muted text-sm leading-relaxed mt-4">Sim. Atendemos clientes em português, inglês e espanhol, com sede nos Estados Unidos e atuação remota para qualquer parte do mundo.</p>
+          </details>
+
+          <details class="group border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.35)]">
+            <summary data-i18n="faq_q6" class="cursor-pointer list-none flex items-center justify-between gap-4 font-black text-sm uppercase tracking-[.04em]">
+              Como funciona o processo de pagamento?
+              <span class="text-rinko-red2 text-xl shrink-0 transition group-open:rotate-45">+</span>
+            </summary>
+            <p data-i18n="faq_a6" class="text-rinko-muted text-sm leading-relaxed mt-4">Trabalhamos normalmente com um sinal para iniciar o projeto e o restante na entrega. As condições são combinadas durante a proposta, conforme o escopo do projeto.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="wave-bg py-24 max-md:py-16 border-b border-rinko-red/20">
+      <div class="max-w-[1536px] mx-auto px-12 max-lg:px-7 max-sm:px-5 grid grid-cols-[360px_1fr] max-lg:grid-cols-1 gap-12 items-start">
+        <div>
+          <div data-i18n="contact_kicker" class="text-rinko-red2 uppercase tracking-[.16em] font-black text-xs mb-3">Vamos conversar?</div>
+          <h2 data-i18n="contact_title" class="font-serif text-[clamp(34px,3.2vw,58px)] leading-none tracking-[-.035em] mb-5">Pronto para tirar sua ideia do papel?</h2>
+          <div class="w-14 h-[2px] bg-rinko-red mb-5"></div>
+          <p data-i18n="contact_text" class="text-rinko-muted leading-relaxed mb-5">Preencha o formulário e entraremos em contato em breve para entender seu projeto.</p>
+          <div class="grid gap-2 text-sm font-semibold">
+            <a href="mailto:contact@rinkodigital.com">✉ contact@rinkodigital.com</a>
+            <a href="https://rinkodigital.com">🌐 rinkodigital.com</a>
+            <span>📍 Washington, USA</span>
+          </div>
+        </div>
+
+        <form name="contact" method="POST" data-netlify="true" class="grid gap-3 border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.45)]">
+          <input type="hidden" name="form-name" value="contact">
+
+          <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-3">
+            <input class="field" name="name" placeholder="Name" data-i18n-placeholder="form_name" required>
+            <input class="field" name="email" type="email" placeholder="Email" data-i18n-placeholder="form_email" required>
+          </div>
+
+          <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-3">
+            <select class="field" name="language" required>
+              <option value="" data-i18n="form_language">Preferred Language</option>
+              <option value="EN">English</option>
+              <option value="PT">Português</option>
+              <option value="ES">Español</option>
+            </select>
+
+            <input class="field" name="business" placeholder="Business Name / Company" data-i18n-placeholder="form_business">
+          </div>
+
+          <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-3">
+            <select class="field" name="budget">
+              <option value="" data-i18n="form_budget">Estimated Budget</option>
+              <option>$150 - $350</option>
+              <option>$350 - $750</option>
+              <option>$750 - $1,500</option>
+              <option>$1,500+</option>
+            </select>
+
+            <select class="field" name="service">
+              <option value="" data-i18n="form_service">What do you need?</option>
+              <option data-i18n="service_web">One-Page Website</option>
+              <option data-i18n="form_landing">Business Website</option>
+              <option data-i18n="form_redesign">Website Redesign</option>
+              <option data-i18n="form_webapp">Custom Website</option>
+            </select>
+          </div>
+
+          <textarea class="field" name="message" placeholder="Tell me about your project" data-i18n-placeholder="form_message"></textarea>
+
+          <button class="h-[56px] bg-gradient-to-br from-[#d91f17] to-rinko-red2 text-white uppercase font-black tracking-[.08em] text-sm" type="submit">
+            <span data-i18n="form_submit">Send Project Request →</span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-black py-7">
+    <div class="max-w-[1536px] mx-auto px-12 max-lg:px-7 max-sm:px-5 flex max-md:flex-col items-center justify-between gap-6 text-sm text-rinko-muted">
+      <img src="assets/rinko-logo.png" alt="Rinko Digital" class="w-[190px]">
+      <span>© 2026 Rinko Digital. Premium Websites & Digital Experiences.</span>
+      <div class="flex gap-7 text-rinko-red2 font-black">
+        <span>IG</span><span>Be</span><span>in</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      pt: {
+        nav_home:"Início", nav_services:"Serviços", nav_portfolio:"Portfólio", nav_about:"Sobre", nav_faq:"FAQ", nav_contact:"Contato", nav_cta:"Fale conosco ↗",
+        hero_eyebrow:"デジタルの力で、アイデアを現実に。",
+        hero_title:'Transformamos ideias em <span class="text-rinko-red2">experiências</span> digitais memoráveis.',
+        hero_text:"Soluções digitais completas que combinam design, tecnologia e estratégia para impulsionar marcas e gerar resultados reais.",
+        hero_cta:"Começar projeto →", hero_portfolio:"Ver portfólio",
+        services_kicker:"Nossos serviços", services_title:"Soluções que impulsionam o seu negócio",
+        service_web:"Web Design", service_dev:"Desenvolvimento", service_brand:"Branding", service_seo:"SEO & GEO", service_ai:"Automação com IA", service_strategy:"Estratégia Digital",
+        service_web_text:"Sites modernos, responsivos e focados em conversão.",
+        service_dev_text:"Soluções web robustas, rápidas e escaláveis.",
+        service_brand_text:"Marcas fortes, memoráveis e alinhadas com propósito.",
+        service_seo_text:"Seja encontrado no Google e em buscas com IA.",
+        service_ai_text:"Automatize processos e aumente sua eficiência.",
+        service_strategy_text:"Planejamento estratégico focado em resultados.",
+        portfolio_kicker:"Portfólio", portfolio_title:"Projetos que geram resultados reais.", portfolio_text:"Cada projeto é único. Cada detalhe é pensado para criar experiências que conectam, engajam e convertem.", portfolio_cta:"Ver todos os projetos →",
+        process_kicker:"Nosso processo", process_title:"Do conceito ao lançamento.",
+        step1_title:"Descobrir", step1_text:"Entendemos seu negócio, objetivos e público.",
+        step2_title:"Planejar", step2_text:"Estratégia, estrutura e design alinhados ao seu objetivo.",
+        step3_title:"Desenvolver", step3_text:"Transformamos o plano em um site rápido, seguro e moderno.",
+        step4_title:"Lançar", step4_text:"Testamos tudo e colocamos seu projeto no ar com excelência.",
+        step5_title:"Crescer", step5_text:"Acompanhamos, otimizamos e impulsionamos seus resultados.",
+        faq_kicker:"Perguntas frequentes", faq_title:"Tire suas dúvidas antes de começar",
+        faq_q1:"Quanto custa um site com a Rinko Digital?", faq_a1:"Os valores variam conforme o escopo do projeto, geralmente entre $150 e $1.500+. No formulário de contato você escolhe a faixa de orçamento e enviamos uma proposta personalizada.",
+        faq_q2:"Quanto tempo leva para o site ficar pronto?", faq_a2:"Projetos simples (landing pages) costumam levar de 1 a 2 semanas. Sites institucionais ou com mais páginas levam de 3 a 6 semanas, dependendo do escopo e da entrega de conteúdo pelo cliente.",
+        faq_q3:"Vocês fazem otimização para SEO e buscas com IA (GEO)?", faq_a3:"Sim. Todos os projetos incluem estrutura otimizada para SEO tradicional (Google) e GEO (ChatGPT, Perplexity, Google AI Overviews), com dados estruturados, performance e conteúdo pensado para ser encontrado.",
+        faq_q4:"O site terá suporte depois do lançamento?", faq_a4:"Sim. Oferecemos suporte pós-lançamento para ajustes, atualizações de conteúdo e correções. Planos de manutenção contínua também estão disponíveis.",
+        faq_q5:"Vocês atendem clientes fora do Brasil?", faq_a5:"Sim. Atendemos clientes em português, inglês e espanhol, com sede nos Estados Unidos e atuação remota para qualquer parte do mundo.",
+        faq_q6:"Como funciona o processo de pagamento?", faq_a6:"Trabalhamos normalmente com um sinal para iniciar o projeto e o restante na entrega. As condições são combinadas durante a proposta, conforme o escopo do projeto.",
+        contact_kicker:"Vamos conversar?", contact_title:"Pronto para tirar sua ideia do papel?", contact_text:"Preencha o formulário e entraremos em contato em breve para entender seu projeto.",
+        form_name:"Nome", form_email:"Email", form_language:"Idioma preferido", form_business:"Nome da empresa", form_budget:"Orçamento estimado", form_service:"O que você precisa?", form_message:"Conte sobre seu projeto",
+        form_landing:"Landing Page", form_redesign:"Redesign de website", form_branding_site:"Branding + Website", form_webapp:"Web App / Solução personalizada", form_submit:"Enviar solicitação →"
+      },
+      en: {
+        nav_home:"Home", nav_services:"Services", nav_portfolio:"Portfolio", nav_about:"About", nav_faq:"FAQ", nav_contact:"Contact", nav_cta:"Contact us ↗",
+        hero_eyebrow:"デジタルの力で、アイデアを現実に。",
+        hero_title:'We turn ideas into memorable digital <span class="text-rinko-red2">experiences</span>.',
+        hero_text:"Complete digital solutions combining design, technology, and strategy to help brands grow and generate real results.",
+        hero_cta:"Start a project →", hero_portfolio:"View portfolio",
+        services_kicker:"Our services", services_title:"Digital solutions that move your business forward",
+        service_web:"Web Design", service_dev:"Development", service_brand:"Branding", service_seo:"SEO & GEO", service_ai:"AI Automation", service_strategy:"Digital Strategy",
+        service_web_text:"Modern, responsive websites focused on conversion.",
+        service_dev_text:"Robust, fast, and scalable web solutions.",
+        service_brand_text:"Strong, memorable brands aligned with purpose.",
+        service_seo_text:"Get found on Google and AI-powered search.",
+        service_ai_text:"Automate processes and increase efficiency.",
+        service_strategy_text:"Strategic planning focused on measurable results.",
+        portfolio_kicker:"Portfolio", portfolio_title:"Projects built to generate real results.", portfolio_text:"Every project is unique. Every detail is designed to create experiences that connect, engage, and convert.", portfolio_cta:"View all projects →",
+        process_kicker:"Our process", process_title:"From concept to launch.",
+        step1_title:"Discover", step1_text:"We understand your business, goals, and audience.",
+        step2_title:"Plan", step2_text:"Strategy, structure, and design aligned with your goals.",
+        step3_title:"Develop", step3_text:"We turn the plan into a fast, secure, modern website.",
+        step4_title:"Launch", step4_text:"We test everything and launch your project with care.",
+        step5_title:"Grow", step5_text:"We monitor, optimize, and help improve your results.",
+        faq_kicker:"Frequently asked questions", faq_title:"Get your questions answered before we start",
+        faq_q1:"How much does a website with Rinko Digital cost?", faq_a1:"Prices vary based on project scope, generally between $150 and $1,500+. In the contact form you can select your budget range and we'll send a tailored proposal.",
+        faq_q2:"How long does it take to build a website?", faq_a2:"Simple projects (landing pages) usually take 1-2 weeks. Institutional or multi-page websites take 3-6 weeks, depending on scope and how quickly content is provided.",
+        faq_q3:"Do you optimize for SEO and AI search (GEO)?", faq_a3:"Yes. Every project includes optimization for traditional SEO (Google) and GEO (ChatGPT, Perplexity, Google AI Overviews), with structured data, performance, and content designed to be found.",
+        faq_q4:"Will the site have support after launch?", faq_a4:"Yes. We offer post-launch support for adjustments, content updates, and fixes. Ongoing maintenance plans are also available.",
+        faq_q5:"Do you work with clients outside the US?", faq_a5:"Yes. We serve clients in Portuguese, English, and Spanish, based in the United States with remote work for clients anywhere in the world.",
+        faq_q6:"How does payment work?", faq_a6:"We typically work with a deposit to start the project and the remainder upon delivery. Terms are agreed during the proposal, based on project scope.",
+        contact_kicker:"Let’s talk?", contact_title:"Ready to bring your idea to life?", contact_text:"Fill out the form and we’ll contact you shortly to understand your project.",
+        form_name:"Name", form_email:"Email", form_language:"Preferred Language", form_business:"Business Name / Company", form_budget:"Estimated Budget", form_service:"What do you need?", form_message:"Tell me about your project",
+        form_landing:"Landing Page", form_redesign:"Website Redesign", form_branding_site:"Branding + Website", form_webapp:"Web App / Custom Solution", form_submit:"Send Project Request →"
+      },
+      es: {
+        nav_home:"Inicio", nav_services:"Servicios", nav_portfolio:"Portafolio", nav_about:"Sobre", nav_faq:"FAQ", nav_contact:"Contacto", nav_cta:"Hablemos ↗",
+        hero_eyebrow:"デジタルの力で、アイデアを現実に。",
+        hero_title:'Convertimos ideas en <span class="text-rinko-red2">experiencias</span> digitales memorables.',
+        hero_text:"Soluciones digitales completas que combinan diseño, tecnología y estrategia para impulsar marcas y generar resultados reales.",
+        hero_cta:"Iniciar proyecto →", hero_portfolio:"Ver portafolio",
+        services_kicker:"Nuestros servicios", services_title:"Soluciones que impulsan tu negocio",
+        service_web:"Diseño Web", service_dev:"Desarrollo", service_brand:"Branding", service_seo:"SEO & GEO", service_ai:"Automatización con IA", service_strategy:"Estrategia Digital",
+        service_web_text:"Sitios modernos, responsivos y enfocados en conversión.",
+        service_dev_text:"Soluciones web robustas, rápidas y escalables.",
+        service_brand_text:"Marcas fuertes, memorables y alineadas con propósito.",
+        service_seo_text:"Haz que te encuentren en Google y búsquedas con IA.",
+        service_ai_text:"Automatiza procesos y aumenta tu eficiencia.",
+        service_strategy_text:"Planificación estratégica enfocada en resultados.",
+        portfolio_kicker:"Portafolio", portfolio_title:"Proyectos que generan resultados reales.", portfolio_text:"Cada proyecto es único. Cada detalle está pensado para crear experiencias que conectan, atraen y convierten.", portfolio_cta:"Ver todos los proyectos →",
+        process_kicker:"Nuestro proceso", process_title:"Del concepto al lanzamiento.",
+        step1_title:"Descubrir", step1_text:"Entendemos tu negocio, objetivos y público.",
+        step2_title:"Planear", step2_text:"Estrategia, estructura y diseño alineados con tu objetivo.",
+        step3_title:"Desarrollar", step3_text:"Convertimos el plan en un sitio rápido, seguro y moderno.",
+        step4_title:"Lanzar", step4_text:"Probamos todo y publicamos tu proyecto con excelencia.",
+        step5_title:"Crecer", step5_text:"Acompañamos, optimizamos e impulsamos tus resultados.",
+        faq_kicker:"Preguntas frecuentes", faq_title:"Resuelve tus dudas antes de empezar",
+        faq_q1:"¿Cuánto cuesta un sitio web con Rinko Digital?", faq_a1:"Los precios varían según el alcance del proyecto, generalmente entre $150 y $1.500+. En el formulario de contacto eliges el rango de presupuesto y enviamos una propuesta personalizada.",
+        faq_q2:"¿Cuánto tiempo tarda en estar listo el sitio?", faq_a2:"Proyectos simples (landing pages) suelen tardar de 1 a 2 semanas. Sitios institucionales o con más páginas tardan de 3 a 6 semanas, según el alcance y la entrega de contenido por parte del cliente.",
+        faq_q3:"¿Optimizan para SEO y búsquedas con IA (GEO)?", faq_a3:"Sí. Todos los proyectos incluyen optimización para SEO tradicional (Google) y GEO (ChatGPT, Perplexity, Google AI Overviews), con datos estructurados, rendimiento y contenido pensado para ser encontrado.",
+        faq_q4:"¿Habrá soporte después del lanzamiento?", faq_a4:"Sí. Ofrecemos soporte posterior al lanzamiento para ajustes, actualizaciones de contenido y correcciones. También hay planes de mantenimiento continuo.",
+        faq_q5:"¿Atienden clientes fuera de EE. UU.?", faq_a5:"Sí. Atendemos clientes en portugués, inglés y español, con sede en Estados Unidos y trabajo remoto para cualquier parte del mundo.",
+        faq_q6:"¿Cómo funciona el proceso de pago?", faq_a6:"Normalmente trabajamos con un anticipo para iniciar el proyecto y el resto en la entrega. Las condiciones se acuerdan durante la propuesta, según el alcance del proyecto.",
+        contact_kicker:"¿Hablamos?", contact_title:"¿Listo para hacer realidad tu idea?", contact_text:"Completa el formulario y nos pondremos en contacto pronto para entender tu proyecto.",
+        form_name:"Nombre", form_email:"Email", form_language:"Idioma preferido", form_business:"Nombre de empresa", form_budget:"Presupuesto estimado", form_service:"¿Qué necesitas?", form_message:"Cuéntame sobre tu proyecto",
+        form_landing:"Landing Page", form_redesign:"Rediseño de website", form_branding_site:"Branding + Website", form_webapp:"Web App / Solución personalizada", form_submit:"Enviar solicitud →"
+      }
+    };
+
+    function setLanguage(lang){
+      const dictionary = translations[lang] || translations.pt;
+      document.documentElement.lang = lang === "pt" ? "pt-BR" : lang;
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.dataset.i18n;
+        if(dictionary[key]) el.textContent = dictionary[key];
+      });
+
+      document.querySelectorAll("[data-i18n-html]").forEach(el => {
+        const key = el.dataset.i18nHtml;
+        if(dictionary[key]) el.innerHTML = dictionary[key];
+      });
+
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.dataset.i18nPlaceholder;
+        if(dictionary[key]) el.placeholder = dictionary[key];
+      });
+
+      document.querySelectorAll("[data-lang-btn]").forEach(btn => {
+        const active = btn.dataset.langBtn === lang;
+        btn.classList.toggle("border-rinko-red/60", active);
+        btn.classList.toggle("text-rinko-red2", active);
+        btn.classList.toggle("border-white/15", !active);
+        btn.classList.toggle("text-white/80", !active);
+      });
+
+      const formLanguage = document.querySelector('select[name="language"]');
+      if(formLanguage) formLanguage.value = lang === "pt" ? "PT" : lang.toUpperCase();
+
+      localStorage.setItem("rinkoLanguage", lang);
+    }
+
+    document.querySelectorAll("[data-lang-btn]").forEach(btn => {
+      btn.addEventListener("click", () => setLanguage(btn.dataset.langBtn));
+    });
+
+    const savedLanguage = localStorage.getItem("rinkoLanguage");
+    const browserLanguage = navigator.language?.slice(0,2).toLowerCase();
+    const initialLanguage = savedLanguage || (["pt","en","es"].includes(browserLanguage) ? browserLanguage : "en");
+    setLanguage(initialLanguage);
+
+    const menu = document.getElementById("menu");
+    const nav = document.getElementById("nav");
+
+    menu?.addEventListener("click", () => {
+      nav.classList.toggle("max-md:hidden");
+      nav.classList.toggle("max-md:block");
+    });
+
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.add("max-md:hidden");
+        nav.classList.remove("max-md:block");
+      });
+    });
+  </script>
+</body>
+</html>
