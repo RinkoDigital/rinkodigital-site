@@ -76,25 +76,29 @@ collections:
           - { label: "Link Professional Stripe", name: "stripe_professional_url", widget: "string", required: false }
           - { label: "Link Custom Payment Stripe", name: "stripe_custom_url", widget: "string", required: false }
 
-  - name: "portfolio"
+  - name: "portfolio_settings"
     label: "Portfólio"
-    folder: "content/portfolio"
-    create: true
-    slug: "{{slug}}"
-    extension: "yml"
-    format: "yml"
-    summary: "{{title}}"
-    fields:
-      - { label: "Nome do projeto", name: "title", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Ordem", name: "order", widget: "number", value_type: "int", default: 1 }
-      - { label: "Publicado", name: "published", widget: "boolean", default: true }
-      - { label: "Categoria PT", name: "category_pt", widget: "string" }
-      - { label: "Categoria EN", name: "category_en", widget: "string" }
-      - { label: "Categoria ES", name: "category_es", widget: "string" }
-      - { label: "Descrição PT", name: "description_pt", widget: "text" }
-      - { label: "Descrição EN", name: "description_en", widget: "text" }
-      - { label: "Descrição ES", name: "description_es", widget: "text" }
-      - { label: "Imagem preview", name: "image", widget: "image" }
-      - { label: "URL do site", name: "url", widget: "string", required: false }
-      - { label: "Status", name: "status", widget: "select", options: ["live", "coming_soon"], default: "live" }
+    files:
+      - name: "portfolio"
+        label: "Projetos do Portfólio"
+        file: "content/portfolio.json"
+        format: "json"
+        fields:
+          - label: "Projetos"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Nome do projeto", name: "title", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Ordem", name: "order", widget: "number", value_type: "int", default: 1 }
+              - { label: "Publicado", name: "published", widget: "boolean", default: true }
+              - { label: "Categoria PT", name: "category_pt", widget: "string" }
+              - { label: "Categoria EN", name: "category_en", widget: "string" }
+              - { label: "Categoria ES", name: "category_es", widget: "string" }
+              - { label: "Descrição PT", name: "description_pt", widget: "text" }
+              - { label: "Descrição EN", name: "description_en", widget: "text" }
+              - { label: "Descrição ES", name: "description_es", widget: "text" }
+              - { label: "Imagem preview", name: "image", widget: "image" }
+              - { label: "URL do site", name: "url", widget: "string", required: false }
+              - { label: "Status", name: "status", widget: "select", options: ["live", "coming_soon"], default: "live" }

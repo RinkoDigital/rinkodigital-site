@@ -24,12 +24,3 @@ https://github.com/RinkoDigital/rinkodigital-site-V2
 ## Observação
 O painel já edita os arquivos YAML em /content.
 Para o HTML renderizar automaticamente esses dados, o próximo passo é conectar index.html e portfolio.html aos arquivos de conteúdo ou migrar para Eleventy/Next.js.
-
-
-## Portfólio dinâmico
-
-O arquivo `portfolio.html` agora carrega automaticamente os projetos salvos pelo Decap CMS em:
-
-`content/portfolio/*.yml`
-
-Quando você publica um projeto novo no CMS, o Decap cria o `.yml` no GitHub e o portfólio lê esses arquivos pela API pública do GitHub.

@@ -1,0 +1,79 @@
+{
+  "projects": [
+    {
+      "title": "Rinko Delivery",
+      "slug": "rinko-delivery",
+      "order": 2,
+      "published": true,
+      "category_pt": "Entrega Local",
+      "category_en": "Local Delivery",
+      "category_es": "Entrega Local",
+      "description_pt": "Landing page para serviço de entrega local, com fluxo de contato, credibilidade e foco em conversão.",
+      "description_en": "Landing page for a local delivery company focused on credibility, contact flow, and conversions.",
+      "description_es": "Landing page para empresa de entregas locales enfocada en credibilidad, flujo de contacto y conversiones.",
+      "image": "/assets/rinko-delivery-preview.png",
+      "url": "https://rinkodelivery.com",
+      "status": "live"
+    },
+    {
+      "title": "Uni Parental",
+      "slug": "uni-parental",
+      "order": 3,
+      "published": true,
+      "category_pt": "Projeto Institucional",
+      "category_en": "Institutional Project",
+      "category_es": "Proyecto Institucional",
+      "description_pt": "Website institucional para uma plataforma de apoio familiar, com visual cinematográfico e experiência acolhedora.",
+      "description_en": "Institutional website for a family support platform with a cinematic visual identity and welcoming experience.",
+      "description_es": "Sitio web institucional para una plataforma de apoyo familiar con identidad visual cinematográfica y experiencia acogedora.",
+      "image": "/assets/uni-parental-preview.png",
+      "url": "",
+      "status": "coming_soon"
+    },
+    {
+      "title": "UniCare Cleaning",
+      "slug": "unicare-cleaning",
+      "order": 1,
+      "published": true,
+      "category_pt": "Serviço de Limpeza",
+      "category_en": "Cleaning Service",
+      "category_es": "Servicio de Limpieza",
+      "description_pt": "Website premium para serviço local com foco em confiança, apresentação de serviços e solicitação de atendimento.",
+      "description_en": "Premium website for a local cleaning service focused on trust, service presentation, and lead generation.",
+      "description_es": "Sitio web premium para servicio local de limpieza enfocado en confianza, presentación de servicios y captación de clientes.",
+      "image": "/assets/uni-care-cleaning-preview.png",
+      "url": "https://unicarecleaning.com",
+      "status": "live"
+    },
+    {
+      "title": "Yas Literária",
+      "slug": "yas-literaria",
+      "order": 4,
+      "published": true,
+      "category_pt": "Plataforma Literária",
+      "category_en": "Literary Platform",
+      "category_es": "Plataforma Literaria",
+      "description_pt": "Projeto de website institucional para uma plataforma literária dedicada à produção editorial, eventos e conexões criativas.",
+      "description_en": "Institutional website project for a literary platform focused on editorial production, events, and creative connections.",
+      "description_es": "Proyecto de sitio web institucional para una plataforma literaria enfocada en producción editorial, eventos y conexiones creativas.",
+      "image": "/assets/yas-literaria-preview.png",
+      "url": "",
+      "status": "coming_soon"
+    },
+    {
+      "title": "TJN Services LLC",
+      "slug": "tjn-services",
+      "order": 5,
+      "published": true,
+      "category_pt": "Construção e Remodelação",
+      "category_en": "Construction & Remodeling",
+      "category_es": "Construcción y Remodelación",
+      "description_pt": "Website profissional desenvolvido para empresa de construção residencial especializada em drywall, pintura, pisos e remodelações.",
+      "description_en": "Professional website developed for a residential construction company specializing in drywall, painting, flooring, and remodeling services.",
+      "description_es": "Sitio web profesional desarrollado para una empresa de construcción residencial especializada en drywall, pintura, pisos y remodelaciones.",
+      "image": "/assets/tjn-services-preview.png",
+      "url": "https://tjnservicesllc.com",
+      "status": "live"
+    }
+  ]
+}
