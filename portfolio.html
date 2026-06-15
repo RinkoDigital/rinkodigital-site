@@ -223,10 +223,54 @@
             </p>
 </div>
 
-          <div id="portfolio-grid" class="grid grid-cols-2 max-md:grid-cols-1 gap-6">
-            <div class="col-span-2 max-md:col-span-1 border border-white/10 bg-black/70 backdrop-blur-[2px] p-8 text-rinko-muted">
-              Carregando projetos do CMS...
-            </div>
+          <div class="grid grid-cols-2 max-md:grid-cols-1 gap-6">
+            <article class="group border border-white/10 bg-black/70 backdrop-blur-[2px] shadow-[0_20px_55px_rgba(0,0,0,.45)] hover:border-rinko-red/60 transition overflow-hidden">
+              <div class="relative h-[260px] overflow-hidden border-b border-white/10 bg-black">
+                <img src="assets/uni-care-cleaning-preview.png" alt="UniCare Cleaning website preview" class="w-full h-full object-cover object-center transition duration-500 group-hover:scale-105">
+              </div>
+              <div class="p-6">
+                <div data-i18n="project_unicare_category" class="text-rinko-red2 uppercase tracking-[.14em] text-[11px] font-black mb-2">Serviço de Limpeza</div>
+                <h3 class="text-xl font-black mb-3">UniCare Cleaning</h3>
+                <p data-i18n="project_unicare_desc" class="text-rinko-muted text-sm leading-relaxed mb-5">Website premium para serviço local com foco em confiança, apresentação de serviços e solicitação de atendimento.</p>
+                <a data-i18n="visit_website" class="text-rinko-red2 text-xs font-black uppercase tracking-[.1em] border-b border-rinko-red" href="https://unicarecleaning.com" target="_blank" rel="noopener noreferrer">Visitar site →</a>
+              </div>
+            </article>
+
+            <article class="group border border-white/10 bg-black/70 backdrop-blur-[2px] shadow-[0_20px_55px_rgba(0,0,0,.45)] hover:border-rinko-red/60 transition overflow-hidden">
+              <div class="relative h-[260px] overflow-hidden border-b border-white/10 bg-black">
+                <img src="assets/rinko-delivery-preview.png" alt="Rinko Delivery website preview" class="w-full h-full object-cover object-center transition duration-500 group-hover:scale-105">
+              </div>
+              <div class="p-6">
+                <div data-i18n="project_delivery_category" class="text-rinko-red2 uppercase tracking-[.14em] text-[11px] font-black mb-2">Entrega Local</div>
+                <h3 class="text-xl font-black mb-3">Rinko Delivery</h3>
+                <p data-i18n="project_delivery_desc" class="text-rinko-muted text-sm leading-relaxed mb-5">Landing page para serviço de entrega local, com fluxo de contato, credibilidade e foco em conversão.</p>
+                <a data-i18n="visit_website" class="text-rinko-red2 text-xs font-black uppercase tracking-[.1em] border-b border-rinko-red" href="https://rinkodelivery.com" target="_blank" rel="noopener noreferrer">Visitar site →</a>
+              </div>
+            </article>
+
+            <article class="group border border-white/10 bg-black/70 backdrop-blur-[2px] shadow-[0_20px_55px_rgba(0,0,0,.45)] hover:border-rinko-red/60 transition overflow-hidden">
+              <div class="relative h-[260px] overflow-hidden border-b border-white/10 bg-black">
+                <img src="assets/uni-parental-preview.png" alt="Uni Parental website preview" class="w-full h-full object-cover object-center transition duration-500 group-hover:scale-105">
+              </div>
+              <div class="p-6">
+                <div data-i18n="project_uniparental_category" class="text-rinko-red2 uppercase tracking-[.14em] text-[11px] font-black mb-2">Projeto Institucional</div>
+                <h3 class="text-xl font-black mb-3">Uni Parental</h3>
+                <p data-i18n="project_uniparental_desc" class="text-rinko-muted text-sm leading-relaxed mb-5">Website institucional para uma plataforma de apoio familiar, com visual cinematográfico e experiência acolhedora.</p>
+                <span data-i18n="coming_soon" class="inline-block text-rinko-muted text-xs font-black uppercase tracking-[.1em] border-b border-white/20 cursor-not-allowed">Em breve</span>
+              </div>
+            </article>
+
+            <article class="group border border-white/10 bg-black/70 backdrop-blur-[2px] shadow-[0_20px_55px_rgba(0,0,0,.45)] hover:border-rinko-red/60 transition overflow-hidden">
+              <div class="relative h-[260px] overflow-hidden border-b border-white/10 bg-black">
+                <img src="assets/yas-literaria-preview.png" alt="Yas Literária website preview" class="w-full h-full object-cover object-center transition duration-500 group-hover:scale-105">
+              </div>
+              <div class="p-6">
+                <div data-i18n="project_yas_category" class="text-rinko-red2 uppercase tracking-[.14em] text-[11px] font-black mb-2">Plataforma Literária</div>
+                <h3 class="text-xl font-black mb-3">Yas Literária</h3>
+                <p data-i18n="project_yas_desc" class="text-rinko-muted text-sm leading-relaxed mb-5">Projeto de website institucional para uma plataforma literária dedicada à produção editorial, eventos e conexões criativas.</p>
+                <span data-i18n="coming_soon" class="inline-block text-rinko-muted text-xs font-black uppercase tracking-[.1em] border-b border-white/20 cursor-not-allowed">Em breve</span>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -404,143 +448,6 @@
     });
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
-  <script>
-    const portfolioGrid = document.getElementById("portfolio-grid");
-    let cmsProjects = [];
-
-    const repoCandidates = [
-      "content/portfolio",
-      "Site V2/content/portfolio",
-      "site v2/content/portfolio",
-      "site v2/site v2/content/portfolio"
-    ];
-
-    function githubApiUrl(path) {
-      return "https://api.github.com/repos/RinkoDigital/rinkodigital-site-V2/contents/" +
-        path.split("/").map(encodeURIComponent).join("/") +
-        "?ref=main";
-    }
-
-    async function fetchPortfolioFiles() {
-      for (const path of repoCandidates) {
-        try {
-          const response = await fetch(githubApiUrl(path), { cache: "no-store" });
-          if (!response.ok) continue;
-
-          const files = await response.json();
-          if (!Array.isArray(files)) continue;
-
-          const ymlFiles = files.filter(file => file.type === "file" && /\.(yml|yaml)$/i.test(file.name));
-          if (!ymlFiles.length) continue;
-
-          const projects = await Promise.all(
-            ymlFiles.map(async file => {
-              const fileResponse = await fetch(file.download_url, { cache: "no-store" });
-              const text = await fileResponse.text();
-              const data = jsyaml.load(text);
-              return data;
-            })
-          );
-
-          return projects;
-        } catch (error) {
-          console.warn("Portfolio CMS path failed:", path, error);
-        }
-      }
-
-      return [];
-    }
-
-    function normalizePath(path) {
-      if (!path) return "";
-      if (/^https?:\/\//i.test(path)) return path;
-      return path.startsWith("/") ? path : "/" + path;
-    }
-
-    function currentLang() {
-      const saved = localStorage.getItem("rinkoLanguage");
-      if (["pt", "en", "es"].includes(saved)) return saved;
-      const browser = navigator.language?.slice(0, 2).toLowerCase();
-      return ["pt", "en", "es"].includes(browser) ? browser : "en";
-    }
-
-    function t(project, field, lang) {
-      return project[`${field}_${lang}`] || project[`${field}_pt`] || project[field] || "";
-    }
-
-    function buttonHtml(project, lang) {
-      if (project.status === "live" && project.url) {
-        const label = lang === "pt" ? "Visitar site →" : lang === "es" ? "Visitar sitio →" : "Visit website →";
-        return `<a class="text-rinko-red2 text-xs font-black uppercase tracking-[.1em] border-b border-rinko-red" href="${project.url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
-      }
-
-      const label = lang === "pt" ? "Em breve" : lang === "es" ? "Próximamente" : "Coming soon";
-      return `<span class="inline-block text-rinko-muted text-xs font-black uppercase tracking-[.1em] border-b border-white/20 cursor-not-allowed">${label}</span>`;
-    }
-
-    function renderPortfolio() {
-      const lang = currentLang();
-
-      const projects = cmsProjects
-        .filter(project => project && project.published !== false)
-        .sort((a, b) => Number(a.order || 999) - Number(b.order || 999));
-
-      if (!projects.length) {
-        portfolioGrid.innerHTML = `
-          <div class="col-span-2 max-md:col-span-1 border border-white/10 bg-black/70 backdrop-blur-[2px] p-8 text-rinko-muted">
-            Nenhum projeto encontrado no CMS ainda.
-          </div>
-        `;
-        return;
-      }
-
-      portfolioGrid.innerHTML = projects.map(project => {
-        const title = project.title || "Projeto";
-        const category = t(project, "category", lang);
-        const description = t(project, "description", lang);
-        const image = normalizePath(project.image);
-
-        return `
-          <article class="group border border-white/10 bg-black/70 backdrop-blur-[2px] shadow-[0_20px_55px_rgba(0,0,0,.45)] hover:border-rinko-red/60 transition overflow-hidden">
-            <div class="relative h-[260px] overflow-hidden border-b border-white/10 bg-black">
-              ${image ? `<img src="${image}" alt="${title} website preview" class="w-full h-full object-cover object-center transition duration-500 group-hover:scale-105">` : ""}
-            </div>
-            <div class="p-6">
-              <div class="text-rinko-red2 uppercase tracking-[.14em] text-[11px] font-black mb-2">${category}</div>
-              <h3 class="text-xl font-black mb-3">${title}</h3>
-              <p class="text-rinko-muted text-sm leading-relaxed mb-5">${description}</p>
-              ${buttonHtml(project, lang)}
-            </div>
-          </article>
-        `;
-      }).join("");
-    }
-
-    async function loadPortfolioFromCMS() {
-      try {
-        cmsProjects = await fetchPortfolioFiles();
-        renderPortfolio();
-      } catch (error) {
-        console.error("Erro ao carregar portfólio do CMS:", error);
-        portfolioGrid.innerHTML = `
-          <div class="col-span-2 max-md:col-span-1 border border-white/10 bg-black/70 backdrop-blur-[2px] p-8 text-rinko-muted">
-            Não foi possível carregar os projetos do CMS.
-          </div>
-        `;
-      }
-    }
-
-    document.querySelectorAll("[data-lang-btn]").forEach(button => {
-      button.addEventListener("click", () => {
-        setTimeout(renderPortfolio, 50);
-      });
-    });
-
-    loadPortfolioFromCMS();
-  </script>
-
-
   <script>
     async function loadPortfolioFromCMS() {
       const grid = document.getElementById("portfolio-grid");
@@ -548,47 +455,84 @@
 
       const savedLang = localStorage.getItem("rinkoLanguage");
       const browserLang = (navigator.language || "en").slice(0, 2).toLowerCase();
-      const lang = ["pt", "en", "es"].includes(savedLang) ? savedLang : (["pt", "en", "es"].includes(browserLang) ? browserLang : "en");
+      const lang = ["pt", "en", "es"].includes(savedLang)
+        ? savedLang
+        : (["pt", "en", "es"].includes(browserLang) ? browserLang : "en");
 
       const labels = {
-        pt: { visit: "Visitar site →", soon: "Em breve", empty: "Nenhum projeto publicado ainda." },
-        en: { visit: "Visit website →", soon: "Coming soon", empty: "No published projects yet." },
-        es: { visit: "Visitar sitio →", soon: "Próximamente", empty: "Aún no hay proyectos publicados." }
+        pt: { visit: "Visitar site →", soon: "Em breve", empty: "Nenhum projeto publicado ainda.", error: "Não foi possível carregar os projetos do CMS." },
+        en: { visit: "Visit website →", soon: "Coming soon", empty: "No published projects yet.", error: "Could not load CMS projects." },
+        es: { visit: "Visitar sitio →", soon: "Próximamente", empty: "Aún no hay proyectos publicados.", error: "No fue posible cargar los proyectos del CMS." }
       };
 
-      try {
-        const response = await fetch("/content/portfolio.json", { cache: "no-store" });
-        if (!response.ok) throw new Error("Não foi possível carregar content/portfolio.json");
+      const dictionary = labels[lang] || labels.en;
 
-        const data = await response.json();
+      function escapeHtml(value) {
+        return String(value || "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      async function fetchPortfolioJson() {
+        const paths = [
+          "content/portfolio.json",
+          "/content/portfolio.json"
+        ];
+
+        let lastError = null;
+
+        for (const path of paths) {
+          try {
+            const response = await fetch(path + "?v=" + Date.now(), { cache: "no-store" });
+            if (!response.ok) {
+              lastError = new Error(path + " returned " + response.status);
+              continue;
+            }
+            return await response.json();
+          } catch (error) {
+            lastError = error;
+          }
+        }
+
+        throw lastError || new Error("portfolio.json not found");
+      }
+
+      try {
+        const data = await fetchPortfolioJson();
+
         const projects = (data.projects || [])
-          .filter(project => project.published !== false)
+          .filter(project => project && project.published !== false)
           .sort((a, b) => Number(a.order || 999) - Number(b.order || 999));
 
         if (!projects.length) {
-          grid.innerHTML = `<div class="border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 text-rinko-muted">${labels[lang].empty}</div>`;
+          grid.innerHTML = `<div class="col-span-2 max-md:col-span-1 border border-white/10 bg-black/70 backdrop-blur-[2px] p-8 text-rinko-muted">${dictionary.empty}</div>`;
           return;
         }
 
         grid.innerHTML = projects.map(project => {
-          const category = project[`category_${lang}`] || project.category_en || project.category_pt || "";
-          const description = project[`description_${lang}`] || project.description_en || project.description_pt || "";
-          const image = project.image || "/assets/rinko-hero-bg.png";
-          const isLive = project.status === "live" && project.url;
+          const title = escapeHtml(project.title);
+          const category = escapeHtml(project[`category_${lang}`] || project.category_en || project.category_pt || "");
+          const description = escapeHtml(project[`description_${lang}`] || project.description_en || project.description_pt || "");
+          const image = escapeHtml(project.image || "/assets/rinko-hero-bg.png");
+          const url = escapeHtml(project.url || "");
+          const isLive = project.status === "live" && url;
 
           return `
             <article class="group border border-white/10 bg-black/70 backdrop-blur-[2px] shadow-[0_20px_55px_rgba(0,0,0,.45)] hover:border-rinko-red/60 transition overflow-hidden">
               <div class="relative h-[260px] overflow-hidden border-b border-white/10 bg-black">
-                <img src="${image}" alt="${project.title || "Project"} website preview" class="w-full h-full object-cover object-center transition duration-500 group-hover:scale-105">
+                <img src="${image}" alt="${title} website preview" class="w-full h-full object-cover object-center transition duration-500 group-hover:scale-105">
               </div>
               <div class="p-6">
                 <div class="text-rinko-red2 uppercase tracking-[.14em] text-[11px] font-black mb-2">${category}</div>
-                <h3 class="text-xl font-black mb-3">${project.title || ""}</h3>
+                <h3 class="text-xl font-black mb-3">${title}</h3>
                 <p class="text-rinko-muted text-sm leading-relaxed mb-5">${description}</p>
                 ${
                   isLive
-                    ? `<a class="text-rinko-red2 text-xs font-black uppercase tracking-[.1em] border-b border-rinko-red" href="${project.url}" target="_blank" rel="noopener noreferrer">${labels[lang].visit}</a>`
-                    : `<span class="inline-block text-rinko-muted text-xs font-black uppercase tracking-[.1em] border-b border-white/20 cursor-not-allowed">${labels[lang].soon}</span>`
+                    ? `<a class="text-rinko-red2 text-xs font-black uppercase tracking-[.1em] border-b border-rinko-red" href="${url}" target="_blank" rel="noopener noreferrer">${dictionary.visit}</a>`
+                    : `<span class="inline-block text-rinko-muted text-xs font-black uppercase tracking-[.1em] border-b border-white/20 cursor-not-allowed">${dictionary.soon}</span>`
                 }
               </div>
             </article>
@@ -596,11 +540,16 @@
         }).join("");
       } catch (error) {
         console.error("Portfolio CMS error:", error);
-        grid.innerHTML = `<div class="border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 text-rinko-muted">${labels[lang].empty}</div>`;
+        grid.innerHTML = `<div class="col-span-2 max-md:col-span-1 border border-white/10 bg-black/70 backdrop-blur-[2px] p-8 text-rinko-muted">${dictionary.error}</div>`;
       }
     }
 
-    document.addEventListener("DOMContentLoaded", loadPortfolioFromCMS);
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", loadPortfolioFromCMS);
+    } else {
+      loadPortfolioFromCMS();
+    }
+
     document.querySelectorAll("[data-lang-btn]").forEach(btn => {
       btn.addEventListener("click", () => setTimeout(loadPortfolioFromCMS, 100));
     });
