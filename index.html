@@ -469,9 +469,10 @@
         <form name="contact" method="POST" data-netlify="true" class="grid gap-3 border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.45)]">
           <input type="hidden" name="form-name" value="contact">
 
-          <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-3">
+          <div class="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-3">
             <input class="field" name="name" placeholder="Name" data-i18n-placeholder="form_name" required>
             <input class="field" name="email" type="email" placeholder="Email" data-i18n-placeholder="form_email" required>
+            <input class="field" name="phone" type="tel" placeholder="Phone Number" data-i18n-placeholder="form_phone">
           </div>
 
           <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-3">
@@ -483,6 +484,24 @@
             </select>
 
             <input class="field" name="business" placeholder="Business Name / Company" data-i18n-placeholder="form_business">
+          </div>
+
+          <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-3">
+            <select class="field" name="preferred_contact">
+              <option value="" data-i18n="form_contact_method">Preferred Contact Method</option>
+              <option value="Email" data-i18n="form_contact_email">Email</option>
+              <option value="Phone Call" data-i18n="form_contact_phone">Phone Call</option>
+              <option value="SMS" data-i18n="form_contact_sms">Text Message (SMS)</option>
+              <option value="WhatsApp">WhatsApp</option>
+            </select>
+
+            <select class="field" name="best_time">
+              <option value="" data-i18n="form_best_time">Best Time To Contact</option>
+              <option value="Morning" data-i18n="form_time_morning">Morning</option>
+              <option value="Afternoon" data-i18n="form_time_afternoon">Afternoon</option>
+              <option value="Evening" data-i18n="form_time_evening">Evening</option>
+              <option value="Anytime" data-i18n="form_time_anytime">Anytime</option>
+            </select>
           </div>
 
           <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-3">
@@ -554,7 +573,7 @@
         faq_q5:"Vocês atendem clientes fora do Brasil?", faq_a5:"Sim. Atendemos clientes em português, inglês e espanhol, com sede nos Estados Unidos e atuação remota para qualquer parte do mundo.",
         faq_q6:"Como funciona o processo de pagamento?", faq_a6:"Trabalhamos normalmente com um sinal para iniciar o projeto e o restante na entrega. As condições são combinadas durante a proposta, conforme o escopo do projeto.",
         contact_kicker:"Vamos conversar?", contact_title:"Pronto para tirar sua ideia do papel?", contact_text:"Preencha o formulário e entraremos em contato em breve para entender seu projeto.",
-        form_name:"Nome", form_email:"Email", form_language:"Idioma preferido", form_business:"Nome da empresa", form_budget:"Orçamento estimado", form_service:"O que você precisa?", form_message:"Conte sobre seu projeto",
+        form_name:"Nome", form_email:"Email", form_phone:"Telefone", form_language:"Idioma preferido", form_business:"Nome da empresa", form_contact_method:"Método de contato preferido", form_contact_email:"Email", form_contact_phone:"Ligação", form_contact_sms:"Mensagem de texto (SMS)", form_best_time:"Melhor horário para contato", form_time_morning:"Manhã", form_time_afternoon:"Tarde", form_time_evening:"Noite", form_time_anytime:"Qualquer horário", form_budget:"Orçamento estimado", form_service:"O que você precisa?", form_message:"Conte sobre seu projeto",
         form_landing:"Landing Page", form_redesign:"Redesign de website", form_branding_site:"Branding + Website", form_webapp:"Web App / Solução personalizada", form_submit:"Enviar solicitação →"
       },
       en: {
@@ -586,7 +605,7 @@
         faq_q5:"Do you work with clients outside the US?", faq_a5:"Yes. We serve clients in Portuguese, English, and Spanish, based in the United States with remote work for clients anywhere in the world.",
         faq_q6:"How does payment work?", faq_a6:"We typically work with a deposit to start the project and the remainder upon delivery. Terms are agreed during the proposal, based on project scope.",
         contact_kicker:"Let’s talk?", contact_title:"Ready to bring your idea to life?", contact_text:"Fill out the form and we’ll contact you shortly to understand your project.",
-        form_name:"Name", form_email:"Email", form_language:"Preferred Language", form_business:"Business Name / Company", form_budget:"Estimated Budget", form_service:"What do you need?", form_message:"Tell me about your project",
+        form_name:"Name", form_email:"Email", form_phone:"Phone Number", form_language:"Preferred Language", form_business:"Business Name / Company", form_contact_method:"Preferred Contact Method", form_contact_email:"Email", form_contact_phone:"Phone Call", form_contact_sms:"Text Message (SMS)", form_best_time:"Best Time To Contact", form_time_morning:"Morning", form_time_afternoon:"Afternoon", form_time_evening:"Evening", form_time_anytime:"Anytime", form_budget:"Estimated Budget", form_service:"What do you need?", form_message:"Tell me about your project",
         form_landing:"Landing Page", form_redesign:"Website Redesign", form_branding_site:"Branding + Website", form_webapp:"Web App / Custom Solution", form_submit:"Send Project Request →"
       },
       es: {
@@ -618,7 +637,7 @@
         faq_q5:"¿Atienden clientes fuera de EE. UU.?", faq_a5:"Sí. Atendemos clientes en portugués, inglés y español, con sede en Estados Unidos y trabajo remoto para cualquier parte del mundo.",
         faq_q6:"¿Cómo funciona el proceso de pago?", faq_a6:"Normalmente trabajamos con un anticipo para iniciar el proyecto y el resto en la entrega. Las condiciones se acuerdan durante la propuesta, según el alcance del proyecto.",
         contact_kicker:"¿Hablamos?", contact_title:"¿Listo para hacer realidad tu idea?", contact_text:"Completa el formulario y nos pondremos en contacto pronto para entender tu proyecto.",
-        form_name:"Nombre", form_email:"Email", form_language:"Idioma preferido", form_business:"Nombre de empresa", form_budget:"Presupuesto estimado", form_service:"¿Qué necesitas?", form_message:"Cuéntame sobre tu proyecto",
+        form_name:"Nombre", form_email:"Email", form_phone:"Teléfono", form_language:"Idioma preferido", form_business:"Nombre de empresa", form_contact_method:"Método de contacto preferido", form_contact_email:"Email", form_contact_phone:"Llamada", form_contact_sms:"Mensaje de texto (SMS)", form_best_time:"Mejor horario para contactar", form_time_morning:"Mañana", form_time_afternoon:"Tarde", form_time_evening:"Noche", form_time_anytime:"Cualquier horario", form_budget:"Presupuesto estimado", form_service:"¿Qué necesitas?", form_message:"Cuéntame sobre tu proyecto",
         form_landing:"Landing Page", form_redesign:"Rediseño de website", form_branding_site:"Branding + Website", form_webapp:"Web App / Solución personalizada", form_submit:"Enviar solicitud →"
       }
     };
