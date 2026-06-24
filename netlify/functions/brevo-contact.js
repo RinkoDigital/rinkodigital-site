@@ -1,68 +1,83 @@
 exports.handler = async (event) => {
+  const jsonHeaders = { "Content-Type": "application/json" };
+
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ error: "Method not allowed" })
+      headers: jsonHeaders,
+      body: JSON.stringify({ error: "Method not allowed. Use POST." })
     };
   }
 
-  const apiKey = process.env.BREVO_API_KEY;
+  const apiKey = String(process.env.BREVO_API_KEY || "").trim();
 
   if (!apiKey) {
+    console.error("Missing BREVO_API_KEY.");
     return {
       statusCode: 500,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ error: "Missing BREVO_API_KEY environment variable." })
+      headers: jsonHeaders,
+      body: JSON.stringify({ error: "Missing BREVO_API_KEY." })
     };
   }
 
   let data = {};
   try {
     data = JSON.parse(event.body || "{}");
-  } catch {
+  } catch (error) {
+    console.error("Invalid JSON body:", error);
     return {
       statusCode: 400,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ error: "Invalid request body." })
+      headers: jsonHeaders,
+      body: JSON.stringify({ error: "Invalid JSON body." })
     };
   }
 
   if (data["bot-field"]) {
     return {
       statusCode: 200,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ok: true })
+      headers: jsonHeaders,
+      body: JSON.stringify({ ok: true, spam: true })
     };
   }
 
-  const email = String(data.email || "").trim();
+  const email = String(data.email || "").trim().toLowerCase();
 
   if (!email || !email.includes("@")) {
+    console.error("Missing or invalid email:", email);
     return {
       statusCode: 400,
-      headers: { "Content-Type": "application/json" },
+      headers: jsonHeaders,
       body: JSON.stringify({ error: "Valid email is required." })
     };
   }
 
   const language = String(data.language || "").trim().toLowerCase();
 
-  let selectedListId = process.env.BREVO_LIST_ID_us || process.env.BREVO_LIST_ID;
+  let selectedListId = process.env.BREVO_LIST_ID_us || process.env.BREVO_LIST_ID || "6";
 
-  if (language === "pt" || language === "pt-br" || language === "portuguese" || language === "português") {
+  if (["pt", "pt-br", "portuguese", "português"].includes(language)) {
     selectedListId = process.env.BREVO_LIST_ID_pt || selectedListId;
-  } else if (language === "es" || language === "spanish" || language === "español") {
+  }
+
+  if (["es", "spanish", "español"].includes(language)) {
     selectedListId = process.env.BREVO_LIST_ID_es || selectedListId;
-  } else if (language === "en" || language === "us" || language === "english") {
+  }
+
+  if (["en", "us", "english"].includes(language)) {
     selectedListId = process.env.BREVO_LIST_ID_us || selectedListId;
   }
 
-  const listId = Number(selectedListId);
+  const numericListId = Number(String(selectedListId || "").trim());
+  const listIds = Number.isInteger(numericListId) && numericListId > 0 ? [numericListId] : [];
 
-  const listIds = Number.isInteger(listId) && listId > 0 ? [listId] : [];
+  console.log("Brevo form received:", {
+    email,
+    language,
+    selectedListId,
+    listIds
+  });
 
-  const fullAttributes = {
+  const allAttributes = {
     FIRSTNAME: String(data.name || "").trim(),
     PHONE: String(data.phone || "").trim(),
     LANGUAGE: String(data.language || "").trim(),
@@ -75,89 +90,104 @@ exports.handler = async (event) => {
     SOURCE: "Rinko Digital Website"
   };
 
-  const minimalAttributes = {
+  const basicAttributes = {
     FIRSTNAME: String(data.name || "").trim()
   };
 
-  async function sendToBrevo(payload) {
-    return fetch("https://api.brevo.com/v3/contacts", {
+  async function sendToBrevo(label, payload) {
+    console.log("Trying Brevo payload:", label, payload);
+
+    const response = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",
       headers: {
         "accept": "application/json",
-        "api-key": apiKey,
-        "content-type": "application/json"
+        "content-type": "application/json",
+        "api-key": apiKey
       },
       body: JSON.stringify(payload)
     });
+
+    const text = await response.text();
+
+    console.log("Brevo response:", label, response.status, text);
+
+    return {
+      ok: response.ok,
+      status: response.status,
+      text
+    };
   }
 
-  const fullPayload = {
-    email,
-    attributes: fullAttributes,
-    updateEnabled: true
-  };
+  const payloads = [];
 
-  if (listIds.length) {
-    fullPayload.listIds = listIds;
-  }
-
-  try {
-    let response = await sendToBrevo(fullPayload);
-    let responseText = await response.text();
-
-    if (response.ok) {
-      console.log("Brevo contact sent with full attributes:", email);
-      return {
-        statusCode: 200,
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ok: true, mode: "full" })
-      };
-    }
-
-    console.error("Brevo full payload failed:", response.status, responseText);
-
-    const minimalPayload = {
+  payloads.push({
+    label: "full",
+    body: {
       email,
-      attributes: minimalAttributes,
-      updateEnabled: true
-    };
-
-    if (listIds.length) {
-      minimalPayload.listIds = listIds;
+      attributes: allAttributes,
+      updateEnabled: true,
+      ...(listIds.length ? { listIds } : {})
     }
+  });
 
-    response = await sendToBrevo(minimalPayload);
-    responseText = await response.text();
+  payloads.push({
+    label: "basic",
+    body: {
+      email,
+      attributes: basicAttributes,
+      updateEnabled: true,
+      ...(listIds.length ? { listIds } : {})
+    }
+  });
 
-    if (response.ok) {
-      console.log("Brevo contact sent with minimal attributes:", email);
-      return {
-        statusCode: 200,
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ok: true, mode: "minimal" })
+  payloads.push({
+    label: "email_only",
+    body: {
+      email,
+      updateEnabled: true,
+      ...(listIds.length ? { listIds } : {})
+    }
+  });
+
+  let lastError = null;
+
+  for (const payload of payloads) {
+    try {
+      const result = await sendToBrevo(payload.label, payload.body);
+
+      if (result.ok) {
+        return {
+          statusCode: 200,
+          headers: jsonHeaders,
+          body: JSON.stringify({
+            ok: true,
+            mode: payload.label,
+            listIds
+          })
+        };
+      }
+
+      lastError = {
+        mode: payload.label,
+        status: result.status,
+        details: result.text
+      };
+    } catch (error) {
+      console.error("Brevo request failed:", payload.label, error);
+      lastError = {
+        mode: payload.label,
+        status: 500,
+        details: error.message
       };
     }
-
-    console.error("Brevo minimal payload failed:", response.status, responseText);
-
-    return {
-      statusCode: response.status,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        error: "Brevo rejected the contact.",
-        details: responseText
-      })
-    };
-  } catch (error) {
-    console.error("Brevo function error:", error);
-
-    return {
-      statusCode: 500,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        error: "Could not send contact to Brevo.",
-        details: error.message
-      })
-    };
   }
+
+  return {
+    statusCode: lastError?.status || 500,
+    headers: jsonHeaders,
+    body: JSON.stringify({
+      error: "Brevo rejected all payload attempts.",
+      lastError
+    })
+  };
 };
