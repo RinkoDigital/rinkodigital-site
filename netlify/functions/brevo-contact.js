@@ -56,15 +56,15 @@ exports.handler = async (event) => {
   let selectedListId = process.env.BREVO_LIST_ID_us || process.env.BREVO_LIST_ID || "6";
 
   if (["pt", "pt-br", "portuguese", "português"].includes(language)) {
-    selectedListId = process.env.BREVO_LIST_ID_pt || selectedListId;
+    selectedListId = (process.env.BREVO_LIST_ID_pt || "9");
   }
 
   if (["es", "spanish", "español"].includes(language)) {
-    selectedListId = process.env.BREVO_LIST_ID_es || selectedListId;
+    selectedListId = (process.env.BREVO_LIST_ID_es || "12");
   }
 
   if (["en", "us", "english"].includes(language)) {
-    selectedListId = process.env.BREVO_LIST_ID_us || selectedListId;
+    selectedListId = (process.env.BREVO_LIST_ID_us || "6");
   }
 
   const numericListId = Number(String(selectedListId || "").trim());
