@@ -466,8 +466,11 @@
           </div>
         </div>
 
-        <form name="contact" method="POST" data-netlify="true" class="grid gap-3 border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.45)]">
+        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify data-netlify-honeypot="bot-field" action="/success.html" class="grid gap-3 border border-white/10 bg-black/70 backdrop-blur-[2px] p-6 shadow-[0_20px_55px_rgba(0,0,0,.45)]">
           <input type="hidden" name="form-name" value="contact">
+          <p hidden>
+            <label>Don't fill this out: <input name="bot-field"></label>
+          </p>
 
           <div class="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-3">
             <input class="field" name="name" placeholder="Name" data-i18n-placeholder="form_name" required>
@@ -527,6 +530,7 @@
           <button class="h-[56px] bg-gradient-to-br from-[#d91f17] to-rinko-red2 text-white uppercase font-black tracking-[.08em] text-sm" type="submit">
             <span data-i18n="form_submit">Send Project Request →</span>
           </button>
+          <p id="form-status" class="text-rinko-muted text-sm leading-relaxed" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -699,5 +703,42 @@
       });
     });
   </script>
+
+  <script>
+    const contactForm = document.getElementById("contact-form");
+    const formStatus = document.getElementById("form-status");
+
+    contactForm?.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      if (formStatus) formStatus.textContent = "Sending...";
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      if (submitButton) submitButton.disabled = true;
+
+      try {
+        const formData = new FormData(contactForm);
+        const payload = Object.fromEntries(formData.entries());
+
+        const response = await fetch("/.netlify/functions/brevo-contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(errorData.error || "Form submission failed.");
+        }
+
+        window.location.href = "/success.html";
+      } catch (error) {
+        if (formStatus) formStatus.textContent = "Something went wrong. Please email contact@rinkodigital.com.";
+        console.error("Contact form error:", error);
+      } finally {
+        if (submitButton) submitButton.disabled = false;
+      }
+    });
+  </script>
+
 </body>
 </html>
