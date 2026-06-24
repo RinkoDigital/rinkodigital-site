@@ -1,18 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Message Sent | Rinko Digital</title>
   <meta name="robots" content="noindex" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "Arial", "sans-serif"],
+            serif: ["Cormorant Garamond", "Georgia", "serif"]
+          },
+          colors: {
+            rinko: {
+              black: "#020202",
+              red: "#e3261d",
+              red2: "#ff3b32",
+              white: "#f7f1eb",
+              muted: "#bdb4ad"
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body{
+      background:
+        linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.76) 46%,rgba(0,0,0,.45) 100%),
+        linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.88)),
+        url("assets/rinko-hero-bg.png") center top / cover no-repeat fixed;
+    }
+
+    .petal{
+      position:absolute;
+      width:9px;
+      height:6px;
+      border-radius:80% 20% 80% 20%;
+      background:linear-gradient(135deg,#ff6b62,#8b0907);
+      opacity:.45;
+      filter:drop-shadow(0 0 8px rgba(227,38,29,.45));
+      animation:fall linear infinite;
+    }
+    .petal:nth-child(1){left:12%;top:-8%;animation-duration:16s;animation-delay:-3s}
+    .petal:nth-child(2){left:33%;top:-8%;animation-duration:21s;animation-delay:-9s}
+    .petal:nth-child(3){left:58%;top:-8%;animation-duration:17s;animation-delay:-5s}
+    .petal:nth-child(4){left:83%;top:-8%;animation-duration:22s;animation-delay:-13s}
+    @keyframes fall{
+      0%{transform:translate3d(0,-10vh,0) rotate(0deg)}
+      50%{transform:translate3d(-70px,54vh,0) rotate(220deg)}
+      100%{transform:translate3d(70px,110vh,0) rotate(480deg)}
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-black text-white grid place-items-center px-6 font-sans">
-  <main class="max-w-xl text-center border border-white/10 bg-black/70 p-10">
-    <h1 class="text-4xl font-black mb-4">Thank you.</h1>
-    <p class="text-white/70 leading-relaxed mb-8">Your message was sent successfully. We will contact you soon using your preferred contact method.</p>
-    <a href="/" class="inline-flex h-12 px-7 items-center justify-center bg-red-600 text-white font-black uppercase tracking-wider text-sm">Return Home</a>
+
+<body class="min-h-screen bg-rinko-black text-rinko-white font-sans overflow-hidden">
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-10" aria-hidden="true">
+    <span class="petal"></span>
+    <span class="petal"></span>
+    <span class="petal"></span>
+    <span class="petal"></span>
+  </div>
+
+  <main class="relative z-20 min-h-screen grid place-items-center px-6">
+    <section class="w-full max-w-2xl border border-white/10 bg-black/75 backdrop-blur-[3px] p-10 max-sm:p-7 shadow-[0_30px_90px_rgba(0,0,0,.65)] text-center">
+      <img src="assets/rinko-logo.png" alt="Rinko Digital" class="w-[230px] max-sm:w-[190px] mx-auto mb-8 drop-shadow-[0_8px_22px_rgba(227,38,29,.35)]">
+
+      <div class="text-rinko-red2 uppercase tracking-[.18em] font-black text-xs mb-4">
+        Message received
+      </div>
+
+      <h1 class="font-serif text-[clamp(42px,5vw,68px)] leading-[.92] tracking-[-.04em] font-bold mb-6">
+        Thank you.
+      </h1>
+
+      <div class="w-14 h-[2px] bg-rinko-red mx-auto shadow-[0_0_20px_rgba(227,38,29,.8)] mb-6"></div>
+
+      <p class="text-rinko-muted text-lg leading-relaxed mb-8">
+        Your project request was sent successfully. We will review your message and contact you soon using your preferred contact method.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-3">
+        <a href="/" class="h-[54px] inline-flex items-center justify-center rounded-xl bg-gradient-to-br from-[#d91f17] to-rinko-red2 text-white uppercase font-black tracking-[.08em] text-sm">
+          Return Home
+        </a>
+
+        <a href="/portfolio.html" class="h-[54px] inline-flex items-center justify-center rounded-xl border border-rinko-red/60 text-rinko-red2 uppercase font-black tracking-[.08em] text-sm hover:bg-rinko-red hover:text-white transition">
+          View Portfolio
+        </a>
+      </div>
+
+      <p class="text-rinko-muted/70 text-xs mt-7">
+        Rinko Digital • Websites • Web Apps • AI Solutions
+      </p>
+    </section>
   </main>
 </body>
 </html>
